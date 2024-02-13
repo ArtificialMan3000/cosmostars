@@ -68,24 +68,22 @@
 ### Как запускать SSR вручную?
 Для development:
 1. `cd packages/client`
-2. `yarn build:ssr`
-3. `yarn build`
-4. `cd ../server`
-5. `yarn dev`
+2. `yarn build`
+3. `cd ../server`
+4. `yarn dev`
 Открыть в браузере http://localhost:8000/
 
 Для production:
 1. `cd packages/client`
-2. `yarn build:ssr`
-3. `yarn build`
-4. `cd ../server`
-5. `yarn build`
-6. `yarn preview`
+2. `yarn build`
+3. `cd ../server`
+4. `yarn build`
+5. `yarn preview`
 Открыть в браузере http://localhost:8000/
 
 ### Как запускать Backend вручную?
 
-После 3 пункта верхних инструкций делаем следующее:
+После 2 пункта верхних инструкций делаем следующее:
 1. В корне проекта вызываем `docker compose up postgres`
 2. Переходим в папку сервера `cd packages/server`
 3. Накатываем миграции `node migrate up`
