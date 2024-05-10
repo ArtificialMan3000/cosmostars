@@ -1,12 +1,12 @@
-import { DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize';
 
-import type { Migration } from "../migrator";
+import type { Migration } from '../migrator';
 
 export const up: Migration = async ({ context: sequelize }) => {
   await sequelize.transaction((t) => {
     return Promise.all([
       sequelize.getQueryInterface().createTable(
-        "topics",
+        'topics',
         {
           id: {
             type: DataTypes.INTEGER.UNSIGNED,
@@ -35,7 +35,7 @@ export const up: Migration = async ({ context: sequelize }) => {
         { transaction: t }
       ),
       sequelize.getQueryInterface().createTable(
-        "comments",
+        'comments',
         {
           id: {
             type: DataTypes.INTEGER.UNSIGNED,
@@ -51,8 +51,8 @@ export const up: Migration = async ({ context: sequelize }) => {
             type: DataTypes.INTEGER.UNSIGNED,
             allowNull: false,
             references: {
-              model: "topics",
-              key: "id",
+              model: 'topics',
+              key: 'id',
             },
           },
           author_id: {
@@ -63,8 +63,8 @@ export const up: Migration = async ({ context: sequelize }) => {
             type: DataTypes.INTEGER.UNSIGNED,
             allowNull: true,
             references: {
-              model: "comments",
-              key: "id",
+              model: 'comments',
+              key: 'id',
             },
           },
           creation_date: {
@@ -76,7 +76,7 @@ export const up: Migration = async ({ context: sequelize }) => {
         { transaction: t }
       ),
       sequelize.getQueryInterface().createTable(
-        "likes",
+        'likes',
         {
           id: {
             type: DataTypes.INTEGER.UNSIGNED,
@@ -88,8 +88,8 @@ export const up: Migration = async ({ context: sequelize }) => {
             type: DataTypes.INTEGER.UNSIGNED,
             allowNull: true,
             references: {
-              model: "comments",
-              key: "id",
+              model: 'comments',
+              key: 'id',
             },
           },
           user_id: {
@@ -100,7 +100,7 @@ export const up: Migration = async ({ context: sequelize }) => {
         { transaction: t }
       ),
       sequelize.getQueryInterface().createTable(
-        "themes",
+        'themes',
         {
           id: {
             type: DataTypes.INTEGER.UNSIGNED,
@@ -127,10 +127,10 @@ export const up: Migration = async ({ context: sequelize }) => {
 export const down: Migration = async ({ context: sequelize }) => {
   await sequelize.transaction((t) => {
     return Promise.all([
-      sequelize.getQueryInterface().dropTable("likes", { transaction: t }),
-      sequelize.getQueryInterface().dropTable("comments", { transaction: t }),
-      sequelize.getQueryInterface().dropTable("topics", { transaction: t }),
-      sequelize.getQueryInterface().dropTable("themes", { transaction: t }),
+      sequelize.getQueryInterface().dropTable('likes', { transaction: t }),
+      sequelize.getQueryInterface().dropTable('comments', { transaction: t }),
+      sequelize.getQueryInterface().dropTable('topics', { transaction: t }),
+      sequelize.getQueryInterface().dropTable('themes', { transaction: t }),
     ]);
   });
 };

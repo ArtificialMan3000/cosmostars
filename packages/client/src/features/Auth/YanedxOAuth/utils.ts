@@ -1,10 +1,10 @@
-import { SignInResponse } from "@/shared/api/auth/models";
+import { SignInResponse } from '@/shared/api/auth/models';
 import {
   useLazyGetServiceIDQuery,
   useSignInYandexOAuthMutation,
-} from "@/shared/api/oauth/oauth";
-import { REDIRECT_URI } from "@/shared/constants/api";
-import { useAuth } from "@/shared/hooks/useAuth";
+} from '@/shared/api/oauth/oauth';
+import { REDIRECT_URI } from '@/shared/constants/api';
+import { useAuth } from '@/shared/hooks/useAuth';
 
 export const useOAuth = () => {
   const [getServiceID] = useLazyGetServiceIDQuery();

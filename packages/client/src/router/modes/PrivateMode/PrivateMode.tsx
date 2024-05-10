@@ -1,8 +1,8 @@
-import { FC, ReactNode } from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import { FC, ReactNode } from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
 
-import { RoutesName } from "@/shared/constants";
-import { useAuth } from "@/shared/hooks/useAuth";
+import { RoutesName } from '@/shared/constants';
+import { useAuth } from '@/shared/hooks/useAuth';
 
 export type PrivateModeProps = {
   children: ReactNode;

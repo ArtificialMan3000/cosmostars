@@ -1,8 +1,8 @@
-import { baseSpeed, GameKeyboard } from "@/shared/constants";
+import { baseSpeed, GameKeyboard } from '@/shared/constants';
 
-import { Player } from "../../model/Player/Player";
-import { Sound } from "../Sound/Sound";
-import { GameListenersType } from "./types";
+import { Player } from '../../model/Player/Player';
+import { Sound } from '../Sound/Sound';
+import { GameListenersType } from './types';
 
 // вспомогательный класс для обработки игровых слушателей
 export class GameListeners {
@@ -73,14 +73,14 @@ export class GameListeners {
   }
 
   public initListeners() {
-    window.addEventListener("keydown", this.handleKeyDown);
-    window.addEventListener("keyup", this.handleKeyUp);
-    window.addEventListener("resize", this.handleResize);
+    window.addEventListener('keydown', this.handleKeyDown);
+    window.addEventListener('keyup', this.handleKeyUp);
+    window.addEventListener('resize', this.handleResize);
   }
 
   public removeListeners() {
-    window.removeEventListener("keydown", this.handleKeyDown);
-    window.removeEventListener("keyup", this.handleKeyUp);
-    window.removeEventListener("resize", this.handleResize);
+    window.removeEventListener('keydown', this.handleKeyDown);
+    window.removeEventListener('keyup', this.handleKeyUp);
+    window.removeEventListener('resize', this.handleResize);
   }
 }

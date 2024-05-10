@@ -2,8 +2,8 @@ import {
   TableFooter as MuiTableFooter,
   TablePagination,
   TableRow,
-} from "@mui/material";
-import React, { FC } from "react";
+} from '@mui/material';
+import React, { FC } from 'react';
 
 type TableFooterProps = {
   pagesCount: number;
@@ -36,7 +36,7 @@ export const TableFooter: FC<TableFooterProps> = ({
           page={currPage}
           SelectProps={{
             inputProps: {
-              "aria-label": "rows per page",
+              'aria-label': 'rows per page',
             },
             native: true,
           }}

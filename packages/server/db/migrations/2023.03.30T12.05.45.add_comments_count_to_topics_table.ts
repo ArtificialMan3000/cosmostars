@@ -1,13 +1,13 @@
-import { DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize';
 
-import type { Migration } from "../migrator";
+import type { Migration } from '../migrator';
 
 export const up: Migration = async ({ context: sequelize }) => {
   await sequelize.transaction((t) => {
     return Promise.all([
       sequelize.getQueryInterface().addColumn(
-        "topics",
-        "comments_count",
+        'topics',
+        'comments_count',
         {
           type: DataTypes.INTEGER,
           allowNull: false,
@@ -24,7 +24,7 @@ export const down: Migration = async ({ context: sequelize }) => {
     return Promise.all([
       sequelize
         .getQueryInterface()
-        .removeColumn("topics", "comments_count", { transaction: t }),
+        .removeColumn('topics', 'comments_count', { transaction: t }),
     ]);
   });
 };

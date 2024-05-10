@@ -1,8 +1,8 @@
-import type { PayloadAction } from "@reduxjs/toolkit";
-import { createSlice } from "@reduxjs/toolkit/dist";
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit/dist';
 
-import { RootState } from "@/app/store/types";
-import { UserInfo } from "@/entities/user/model/types";
+import { RootState } from '@/app/store/types';
+import { UserInfo } from '@/entities/user/model/types';
 
 type InitialState = {
   isAuth: boolean;
@@ -15,7 +15,7 @@ const initialState: InitialState = {
 };
 
 export const authSlice = createSlice({
-  name: "auth",
+  name: 'auth',
   initialState,
   reducers: {
     setIsAuth(state, { payload }: PayloadAction<boolean>) {

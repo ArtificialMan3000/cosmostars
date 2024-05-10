@@ -1,8 +1,8 @@
-import { basicSize } from "../../model/BaseObject/types";
-import { Canvas } from "../Canvas/Canvas";
-import { elementCoords } from "../Canvas/types";
-import { SpinTypes, SpriteConfig, SpriteSpeedLimit } from "./SpriteConfig";
-import { SpriteConfigType, SpriteType } from "./types";
+import { basicSize } from '../../model/BaseObject/types';
+import { Canvas } from '../Canvas/Canvas';
+import { elementCoords } from '../Canvas/types';
+import { SpinTypes, SpriteConfig, SpriteSpeedLimit } from './SpriteConfig';
+import { SpriteConfigType, SpriteType } from './types';
 
 // класс для отрисовки анимированной картинки
 export class Sprite {

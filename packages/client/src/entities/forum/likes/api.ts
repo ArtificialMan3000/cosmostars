@@ -1,7 +1,7 @@
-import { internalApi } from "@/shared/api/internalApi";
-import { HTTPMethods, InternalTags } from "@/shared/api/types";
-import { getErrorReason } from "@/shared/api/utils";
-import { LIKES_API_ENDPOINT } from "@/shared/constants/forum";
+import { internalApi } from '@/shared/api/internalApi';
+import { HTTPMethods, InternalTags } from '@/shared/api/types';
+import { getErrorReason } from '@/shared/api/utils';
+import { LIKES_API_ENDPOINT } from '@/shared/constants/forum';
 
 const likesApi = internalApi.injectEndpoints({
   endpoints: (builder) => ({

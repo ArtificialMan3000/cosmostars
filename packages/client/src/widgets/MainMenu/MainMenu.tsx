@@ -1,13 +1,13 @@
-import { Box, List, Paper } from "@mui/material";
-import { FC } from "react";
+import { Box, List, Paper } from '@mui/material';
+import { FC } from 'react';
 
-import { MenuLink } from "@/features/MenuLink/MenuLink";
-import { MenuItems } from "@/shared/constants";
+import { MenuLink } from '@/features/MenuLink/MenuLink';
+import { MenuItems } from '@/shared/constants';
 
 const paperStyleBase = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
 };
 
 export const MainMenu: FC = () => {
@@ -17,16 +17,16 @@ export const MainMenu: FC = () => {
       className="main-header"
       sx={{
         mt: 2,
-        display: "flex",
-        justifyContent: "center",
+        display: 'flex',
+        justifyContent: 'center',
       }}
     >
       <Paper sx={paperStyleBase}>
         <List
           sx={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
           }}
         >
           {MenuItems.map((item, index) => (

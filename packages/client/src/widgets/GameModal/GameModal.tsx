@@ -5,33 +5,33 @@ import {
   DialogContentText,
   DialogTitle,
   Typography,
-} from "@mui/material";
-import { FC } from "react";
-import { useNavigate } from "react-router-dom";
+} from '@mui/material';
+import { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   resetGameState,
   setGameStatus,
-} from "@/entities/game/model/store/gameSlice";
+} from '@/entities/game/model/store/gameSlice';
 import {
   gameModalSelector,
   gameScoreSelector,
   gameStatusSelector,
-} from "@/entities/game/model/store/selectors";
-import { useAddLeaderboardEntryMutation } from "@/entities/leaderboard/api";
-import { useGetUserQuery } from "@/entities/user/model/api";
-import { GameModalImage } from "@/features/GameModalImage/GameModalImage";
-import { MuteSound } from "@/features/MuteSound/MuteSound";
+} from '@/entities/game/model/store/selectors';
+import { useAddLeaderboardEntryMutation } from '@/entities/leaderboard/api';
+import { useGetUserQuery } from '@/entities/user/model/api';
+import { GameModalImage } from '@/features/GameModalImage/GameModalImage';
+import { MuteSound } from '@/features/MuteSound/MuteSound';
 import {
   BaseGameColors,
   GameModalConfig,
   GameModalImageAlign,
   GameStatuses,
   RoutesName,
-} from "@/shared/constants";
-import { useAppDispatch, useAppSelector } from "@/shared/hooks/store";
+} from '@/shared/constants';
+import { useAppDispatch, useAppSelector } from '@/shared/hooks/store';
 
-import { GameModalType } from "./types";
+import { GameModalType } from './types';
 
 export const GameModal: FC<GameModalType> = (props) => {
   const [addLeaderboardEntry] = useAddLeaderboardEntryMutation();
@@ -88,15 +88,15 @@ export const GameModal: FC<GameModalType> = (props) => {
       fullWidth
       open={isOpen}
       sx={{
-        textAlign: "center",
+        textAlign: 'center',
       }}
       PaperProps={{
         sx: {
           padding: 4,
-          display: "flex",
-          justifyContent: "space-between",
-          overflow: "inherit",
-          backgroundColor: "background.default",
+          display: 'flex',
+          justifyContent: 'space-between',
+          overflow: 'inherit',
+          backgroundColor: 'background.default',
         },
       }}
     >
@@ -140,8 +140,8 @@ export const GameModal: FC<GameModalType> = (props) => {
           )}
           <DialogActions
             sx={{
-              display: "flex",
-              justifyContent: "space-around",
+              display: 'flex',
+              justifyContent: 'space-around',
             }}
           >
             <Button variant="contained" onClick={handleHomeNavigate}>

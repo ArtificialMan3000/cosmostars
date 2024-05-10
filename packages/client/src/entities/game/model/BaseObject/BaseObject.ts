@@ -2,13 +2,13 @@ import {
   initialCoords,
   InitialSizes,
   initialVelocity,
-} from "@/shared/constants";
+} from '@/shared/constants';
 
-import { Canvas } from "../../ui/Canvas/Canvas";
-import { elementCoords } from "../../ui/Canvas/types";
-import { Sprite } from "../../ui/Sprite/Sprite";
-import { SpriteConstants } from "../../ui/Sprite/SpriteConfig";
-import { baseObjectProps, basicSize, basicVelocity } from "./types";
+import { Canvas } from '../../ui/Canvas/Canvas';
+import { elementCoords } from '../../ui/Canvas/types';
+import { Sprite } from '../../ui/Sprite/Sprite';
+import { SpriteConstants } from '../../ui/Sprite/SpriteConfig';
+import { baseObjectProps, basicSize, basicVelocity } from './types';
 
 // родительский класс для сущностей-объектов в игре
 export class BaseObject {

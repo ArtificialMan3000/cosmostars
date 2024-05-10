@@ -1,18 +1,18 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 
-import { ForumPage } from "@/pages/ForumPage";
-import { ForumTopicPage } from "@/pages/ForumTopicPage";
-import { GamePage } from "@/pages/GamePage";
-import { LeaderboardPage } from "@/pages/LeaderboardPage";
-import { MainPage } from "@/pages/MainPage";
-import { NotFoundPage } from "@/pages/NotFoundPage";
-import { ProfilePage } from "@/pages/ProfilePage";
-import { SignInPage } from "@/pages/sign-in";
-import { SignUpPage } from "@/pages/sign-up";
-import { RoutesName } from "@/shared/constants";
+import { ForumPage } from '@/pages/ForumPage';
+import { ForumTopicPage } from '@/pages/ForumTopicPage';
+import { GamePage } from '@/pages/GamePage';
+import { LeaderboardPage } from '@/pages/LeaderboardPage';
+import { MainPage } from '@/pages/MainPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
+import { ProfilePage } from '@/pages/ProfilePage';
+import { SignInPage } from '@/pages/sign-in';
+import { SignUpPage } from '@/pages/sign-up';
+import { RoutesName } from '@/shared/constants';
 
-import { GuestMode } from "./modes/GuestMode";
-import { PrivateMode } from "./modes/PrivateMode";
+import { GuestMode } from './modes/GuestMode';
+import { PrivateMode } from './modes/PrivateMode';
 export const Router = () => {
   return (
     <Routes>

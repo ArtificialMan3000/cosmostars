@@ -1,26 +1,26 @@
-import AsteroidImage1 from "@/assets/images/game-model-asteroid-1.png";
-import AsteroidImage2 from "@/assets/images/game-model-asteroid-2.png";
-import AsteroidImage3 from "@/assets/images/game-model-asteroid-3.png";
-import BonusHealthImage from "@/assets/images/game-model-bonus-health.png";
-import BonusLifeImage from "@/assets/images/game-model-bonus-life.png";
-import BonusPowerImage from "@/assets/images/game-model-bonus-power.png";
-import BonusShieldImage from "@/assets/images/game-model-bonus-shield.png";
-import EnemyImage1 from "@/assets/images/game-model-enemy-1.png";
-import EnemyImage2 from "@/assets/images/game-model-enemy-2.png";
-import EnemyImage3 from "@/assets/images/game-model-enemy-3.png";
-import EnemyImage4 from "@/assets/images/game-model-enemy-4.png";
-import EnemyProjectileImage from "@/assets/images/game-model-enemy-projectile.png";
-import ExplosionSprite from "@/assets/images/game-model-explosion.png";
-import PlayerImage from "@/assets/images/game-model-player.png";
-import PlayerDamagedImage from "@/assets/images/game-model-player-damaged.png";
-import PlayerDestroyedImage from "@/assets/images/game-model-player-destroyed.png";
-import PlayerProjectileImage from "@/assets/images/game-model-player-projectile.png";
-import ShieldImage from "@/assets/images/game-model-shield.png";
-import UfoImage1 from "@/assets/images/game-model-ufo-1.png";
-import UfoImage2 from "@/assets/images/game-model-ufo-2.png";
-import UfoProjectileImage from "@/assets/images/game-model-ufo-projectile.png";
+import AsteroidImage1 from '@/assets/images/game-model-asteroid-1.png';
+import AsteroidImage2 from '@/assets/images/game-model-asteroid-2.png';
+import AsteroidImage3 from '@/assets/images/game-model-asteroid-3.png';
+import BonusHealthImage from '@/assets/images/game-model-bonus-health.png';
+import BonusLifeImage from '@/assets/images/game-model-bonus-life.png';
+import BonusPowerImage from '@/assets/images/game-model-bonus-power.png';
+import BonusShieldImage from '@/assets/images/game-model-bonus-shield.png';
+import EnemyImage1 from '@/assets/images/game-model-enemy-1.png';
+import EnemyImage2 from '@/assets/images/game-model-enemy-2.png';
+import EnemyImage3 from '@/assets/images/game-model-enemy-3.png';
+import EnemyImage4 from '@/assets/images/game-model-enemy-4.png';
+import EnemyProjectileImage from '@/assets/images/game-model-enemy-projectile.png';
+import ExplosionSprite from '@/assets/images/game-model-explosion.png';
+import PlayerImage from '@/assets/images/game-model-player.png';
+import PlayerDamagedImage from '@/assets/images/game-model-player-damaged.png';
+import PlayerDestroyedImage from '@/assets/images/game-model-player-destroyed.png';
+import PlayerProjectileImage from '@/assets/images/game-model-player-projectile.png';
+import ShieldImage from '@/assets/images/game-model-shield.png';
+import UfoImage1 from '@/assets/images/game-model-ufo-1.png';
+import UfoImage2 from '@/assets/images/game-model-ufo-2.png';
+import UfoProjectileImage from '@/assets/images/game-model-ufo-projectile.png';
 
-import { SpriteConfigType } from "./types";
+import { SpriteConfigType } from './types';
 
 export const SpriteSpeedLimit = 4;
 

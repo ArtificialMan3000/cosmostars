@@ -1,11 +1,11 @@
-import { PaletteMode } from "@mui/material";
-import { ThemeOptions } from "@mui/material/styles";
+import { PaletteMode } from '@mui/material';
+import { ThemeOptions } from '@mui/material/styles';
 
 import {
   ThemeBorderRadius,
   ThemeConfig,
   ThemePrimaryButton,
-} from "../constants";
+} from '../constants';
 
 export const createThemeOptions = (mode: PaletteMode): ThemeOptions => ({
   palette: {
@@ -19,7 +19,7 @@ export const createThemeOptions = (mode: PaletteMode): ThemeOptions => ({
     },
   },
   typography: {
-    fontFamily: "Bubblegum Sans, cursive",
+    fontFamily: 'Bubblegum Sans, cursive',
     allVariants: {
       color: ThemeConfig[mode].text,
     },
@@ -34,7 +34,7 @@ export const createThemeOptions = (mode: PaletteMode): ThemeOptions => ({
     },
     MuiPaper: {
       defaultProps: {
-        variant: "outlined",
+        variant: 'outlined',
       },
       styleOverrides: {
         root: {
@@ -46,7 +46,7 @@ export const createThemeOptions = (mode: PaletteMode): ThemeOptions => ({
     MuiTab: {
       styleOverrides: {
         root: {
-          flexDirection: "row",
+          flexDirection: 'row',
         },
       },
     },

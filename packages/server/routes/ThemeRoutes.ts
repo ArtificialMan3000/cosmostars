@@ -1,12 +1,12 @@
-import { Router } from "express";
+import { Router } from 'express';
 
 import {
   createThemeToUser,
   getThemeByUser,
-} from "../controllers/ThemeController";
+} from '../controllers/ThemeController';
 
 const themeRouter = Router();
 
-themeRouter.get("/:id", getThemeByUser).post("/:id", createThemeToUser);
+themeRouter.get('/:id', getThemeByUser).post('/:id', createThemeToUser);
 
 export default themeRouter;

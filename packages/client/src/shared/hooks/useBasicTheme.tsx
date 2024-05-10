@@ -1,15 +1,15 @@
-import { createTheme } from "@mui/material";
-import { FetchBaseQueryError } from "@reduxjs/toolkit/dist/query";
-import { useEffect, useMemo, useState } from "react";
+import { createTheme } from '@mui/material';
+import { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
+import { useEffect, useMemo, useState } from 'react';
 
 import {
   useLazyGetUserThemeQuery,
   usePostUserThemeMutation,
-} from "@/entities/theme/api";
-import { useGetUserQuery } from "@/entities/user/model/api";
+} from '@/entities/theme/api';
+import { useGetUserQuery } from '@/entities/user/model/api';
 
-import { NOT_FOUND_STATUS, ThemeNames } from "../constants";
-import { createThemeOptions } from "../utils/createThemeOptions";
+import { NOT_FOUND_STATUS, ThemeNames } from '../constants';
+import { createThemeOptions } from '../utils/createThemeOptions';
 
 export const useBasicTheme = () => {
   const { data: user } = useGetUserQuery();

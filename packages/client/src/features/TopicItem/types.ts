@@ -1,4 +1,4 @@
-import { AuthorOfTopicData } from "@/entities/forum/topics/api/types";
+import { AuthorOfTopicData } from '@/entities/forum/topics/api/types';
 
 export type TopicItemType = {
   id: number;

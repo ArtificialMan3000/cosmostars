@@ -1,16 +1,16 @@
-import Background from "@/assets/sounds/background.ogg";
-import Bonus from "@/assets/sounds/bonus.wav";
-import Explosion from "@/assets/sounds/explosion.wav";
-import Gameover from "@/assets/sounds/gameover.wav";
-import Shot from "@/assets/sounds/shot.wav";
-import Win from "@/assets/sounds/win.wav";
+import Background from '@/assets/sounds/background.ogg';
+import Bonus from '@/assets/sounds/bonus.wav';
+import Explosion from '@/assets/sounds/explosion.wav';
+import Gameover from '@/assets/sounds/gameover.wav';
+import Shot from '@/assets/sounds/shot.wav';
+import Win from '@/assets/sounds/win.wav';
 import {
   BufferListType,
   GameSounds,
   Sounds,
-} from "@/entities/game/ui/Sound/types";
+} from '@/entities/game/ui/Sound/types';
 
-import BufferLoader from "./BufferLoader";
+import BufferLoader from './BufferLoader';
 
 export class Sound {
   private isMuted = false;
@@ -39,7 +39,7 @@ export class Sound {
 
   constructor() {
     this.context =
-      typeof window !== "undefined" ? new AudioContext() : undefined;
+      typeof window !== 'undefined' ? new AudioContext() : undefined;
     this.bufferLoader = this.context
       ? new BufferLoader(
           this.context,

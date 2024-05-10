@@ -1,6 +1,6 @@
-import { Button, Typography } from "@mui/material";
+import { Button, Typography } from '@mui/material';
 
-import { useOAuth } from "./utils";
+import { useOAuth } from './utils';
 export const YandexOAuth = () => {
   const { handleYandexOAuth } = useOAuth();
   return (

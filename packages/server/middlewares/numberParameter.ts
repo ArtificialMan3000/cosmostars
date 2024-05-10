@@ -1,7 +1,7 @@
-import type express from "express";
+import type express from 'express';
 
-import { BaseStatuses, ErrorMessages } from "../constants";
-import { configureError } from "../utils/configureError";
+import { BaseStatuses, ErrorMessages } from '../constants';
+import { configureError } from '../utils/configureError';
 
 export const numberParameter = (paramName: string) => {
   return (

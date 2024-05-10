@@ -5,13 +5,13 @@ import {
   Paper,
   TextField,
   Typography,
-} from "@mui/material";
-import { useFormik } from "formik";
-import { FC, useState } from "react";
+} from '@mui/material';
+import { useFormik } from 'formik';
+import { FC, useState } from 'react';
 
-import { AddTopicMutation } from "@/entities/forum/topics/api/types";
-import { addTopicValidation } from "@/shared/constants/validationShemas";
-import { clean } from "@/shared/utils/clean";
+import { AddTopicMutation } from '@/entities/forum/topics/api/types';
+import { addTopicValidation } from '@/shared/constants/validationShemas';
+import { clean } from '@/shared/utils/clean';
 
 type AddTopicProps = {
   onSubmit: (data: AddTopicMutation) => unknown;
@@ -24,8 +24,8 @@ export const AddTopic: FC<AddTopicProps> = ({ onSubmit, authorId }) => {
   const handleClose = () => setOpen(false);
   const formikAddTopic = useFormik({
     initialValues: {
-      topicName: "",
-      topicDescription: "",
+      topicName: '',
+      topicDescription: '',
     },
     validationSchema: addTopicValidation,
     onSubmit: ({ topicName, topicDescription }) => {
@@ -46,13 +46,13 @@ export const AddTopic: FC<AddTopicProps> = ({ onSubmit, authorId }) => {
       <Modal open={open} onClose={handleClose}>
         <Paper
           sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "400px",
-            padding: "16px",
-            backgroundColor: "background.default",
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '400px',
+            padding: '16px',
+            backgroundColor: 'background.default',
           }}
         >
           <Typography
@@ -69,7 +69,7 @@ export const AddTopic: FC<AddTopicProps> = ({ onSubmit, authorId }) => {
             onSubmit={formikAddTopic.handleSubmit}
             onReset={formikAddTopic.handleReset}
             sx={{
-              width: "100%",
+              width: '100%',
               my: 2,
               mr: 5,
             }}
@@ -113,8 +113,8 @@ export const AddTopic: FC<AddTopicProps> = ({ onSubmit, authorId }) => {
             <Box
               component="div"
               sx={{
-                display: "flex",
-                justifyContent: "flex-end",
+                display: 'flex',
+                justifyContent: 'flex-end',
               }}
             >
               <Button type="reset">Cancel</Button>

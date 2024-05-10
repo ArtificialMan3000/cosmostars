@@ -1,7 +1,7 @@
-import CloseIcon from "@mui/icons-material/Close";
-import CommentIcon from "@mui/icons-material/Comment";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ReplyIcon from "@mui/icons-material/Reply";
+import CloseIcon from '@mui/icons-material/Close';
+import CommentIcon from '@mui/icons-material/Comment';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ReplyIcon from '@mui/icons-material/Reply';
 import {
   Avatar,
   Button,
@@ -12,20 +12,20 @@ import {
   CardHeader,
   ListItem,
   Typography,
-} from "@mui/material";
-import { FC, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+} from '@mui/material';
+import { FC, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   useAddLikeMutation,
   useDeleteLikeMutation,
-} from "@/entities/forum/likes";
-import { forumApi } from "@/shared/constants/mocks";
-import { configurePluralString } from "@/shared/utils/configurePluralString";
+} from '@/entities/forum/likes';
+import { forumApi } from '@/shared/constants/mocks';
+import { configurePluralString } from '@/shared/utils/configurePluralString';
 
-import { CommentForm } from "../CommentForm/CommentForm";
-import { TypographyButton } from "../TypographyButton/TypographyButton";
-import { TopicItemType } from "./types";
+import { CommentForm } from '../CommentForm/CommentForm';
+import { TypographyButton } from '../TypographyButton/TypographyButton';
+import { TopicItemType } from './types';
 
 export const TopicItem: FC<TopicItemType> = (props) => {
   const {
@@ -124,31 +124,31 @@ export const TopicItem: FC<TopicItemType> = (props) => {
     <Card
       component={ListItem}
       sx={{
-        width: "95%",
-        display: "flex",
-        flexDirection: "column",
+        width: '95%',
+        display: 'flex',
+        flexDirection: 'column',
         mt: 2,
-        mx: "auto",
-        alignItems: "flex-start",
-        overflow: "visible",
-        backgroundImage: "none",
-        boxShadow: "none",
+        mx: 'auto',
+        alignItems: 'flex-start',
+        overflow: 'visible',
+        backgroundImage: 'none',
+        boxShadow: 'none',
       }}
       key={id}
-      variant={isBordered ? "outlined" : "elevation"}
+      variant={isBordered ? 'outlined' : 'elevation'}
     >
       {generateTitle}
       <CardContent>{description}</CardContent>
       <CardActions>
         <TypographyButton
           icon={<CommentIcon color="disabled" />}
-          title={configurePluralString("Comment", comments_count ?? 0)}
+          title={configurePluralString('Comment', comments_count ?? 0)}
           onClick={onExpand}
         />
         {canBeLiked && (
           <TypographyButton
-            icon={<FavoriteIcon color={is_liked ? "error" : "disabled"} />}
-            title={configurePluralString("Like", likes_count ?? 0)}
+            icon={<FavoriteIcon color={is_liked ? 'error' : 'disabled'} />}
+            title={configurePluralString('Like', likes_count ?? 0)}
             onClick={handleChangeIsLike}
           />
         )}

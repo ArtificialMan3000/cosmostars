@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize';
 import {
   AfterCreate,
   AfterDestroy,
@@ -7,13 +7,13 @@ import {
   ForeignKey,
   Model,
   Table,
-} from "sequelize-typescript";
+} from 'sequelize-typescript';
 
-import { Comment } from "./Comment";
-import { User } from "./User";
+import { Comment } from './Comment';
+import { User } from './User';
 
 @Table({
-  tableName: "likes",
+  tableName: 'likes',
   timestamps: false,
 })
 export class Like extends Model {
@@ -34,12 +34,12 @@ export class Like extends Model {
   @AfterCreate
   static async addIncrementLikesCount(instance: Like) {
     const comment: Comment | null = await Comment.findByPk(instance.comment_id);
-    await comment?.increment("likes_count");
+    await comment?.increment('likes_count');
   }
 
   @AfterDestroy
   static async decrementLikesCount(instance: Like) {
     const comment: Comment | null = await Comment.findByPk(instance.comment_id);
-    await comment?.decrement("likes_count");
+    await comment?.decrement('likes_count');
   }
 }

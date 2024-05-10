@@ -1,8 +1,8 @@
 export function initServiceWorker() {
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
       navigator.serviceWorker
-        .register("/serviceWorker.js")
+        .register('/serviceWorker.js')
         .then((registration) => {
           console.log(`Service Worker registered in ${registration.scope}`);
         })
@@ -11,6 +11,6 @@ export function initServiceWorker() {
         );
     });
   } else {
-    console.log("Your browser doesn`t support Service Worker :(");
+    console.log('Your browser doesn`t support Service Worker :(');
   }
 }

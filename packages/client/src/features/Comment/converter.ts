@@ -1,4 +1,4 @@
-import { CommentDataRequest } from "@/entities/forum/comments/api/types";
+import { CommentDataRequest } from '@/entities/forum/comments/api/types';
 
 export const commentConverter = (comment: CommentDataRequest) => ({
   id: comment.id,

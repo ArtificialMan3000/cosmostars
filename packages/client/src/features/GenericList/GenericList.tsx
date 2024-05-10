@@ -1,8 +1,8 @@
-import { Box, List } from "@mui/material";
+import { Box, List } from '@mui/material';
 
-import { CommentFrameWidth } from "@/shared/constants";
+import { CommentFrameWidth } from '@/shared/constants';
 
-import { GenericListType } from "./types";
+import { GenericListType } from './types';
 
 export const GenericList = <T, U extends Record<string, unknown>>({
   items,
@@ -16,8 +16,8 @@ export const GenericList = <T, U extends Record<string, unknown>>({
     <List
       sx={{
         width: `${listWidth}%`,
-        ml: "auto",
-        overflowY: "auto",
+        ml: 'auto',
+        overflowY: 'auto',
       }}
     >
       {items.map((item, index) => {

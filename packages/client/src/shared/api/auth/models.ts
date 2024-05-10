@@ -1,4 +1,4 @@
-import { FetchBaseQueryError } from "@reduxjs/toolkit/dist/query";
+import { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
 export type SignUpRequest = {
   first_name: string;
   second_name: string;
@@ -20,4 +20,4 @@ export type SignInResponse = {
   error: SignInData;
   data: string;
 };
-type SignInData = { status: "CUSTOM_ERROR"; data?: unknown; error: string };
+type SignInData = { status: 'CUSTOM_ERROR'; data?: unknown; error: string };

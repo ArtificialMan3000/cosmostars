@@ -1,18 +1,18 @@
-import { HTTPMethods, Tags } from "@/shared/api/types";
-import { getErrorReason } from "@/shared/api/utils";
-import { yandexApi } from "@/shared/api/yandexApi";
+import { HTTPMethods, Tags } from '@/shared/api/types';
+import { getErrorReason } from '@/shared/api/utils';
+import { yandexApi } from '@/shared/api/yandexApi';
 import {
   LEADERBOARD_API_ENDPOINT,
   RATING_FIELD,
   TEAM_NAME,
-} from "@/shared/constants/leaderboard";
+} from '@/shared/constants/leaderboard';
 
 import {
   AddLeaderboardEntryMutation,
   GetTeamLeaderboardQuery,
   LeaderboardResponse,
   LeaderData,
-} from "./types";
+} from './types';
 
 const leaderboardApi = yandexApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -47,7 +47,7 @@ const leaderboardApi = yandexApi.injectEndpoints({
           ratingFieldName: RATING_FIELD,
           teamName: TEAM_NAME,
         },
-        responseHandler: "content-type",
+        responseHandler: 'content-type',
       }),
       // ? WTF By commenting this out,
       // ? I fixed the bug with not auto-refetching leaderboard after adding a new entry

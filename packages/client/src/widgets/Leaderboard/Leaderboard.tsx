@@ -1,11 +1,11 @@
-import { Box, Paper, Typography } from "@mui/material";
-import { FC, useMemo } from "react";
+import { Box, Paper, Typography } from '@mui/material';
+import { FC, useMemo } from 'react';
 
-import { useGetLeaderboardQuery } from "@/entities/leaderboard/api";
-import { getRandomNumber } from "@/shared/utils/functions";
+import { useGetLeaderboardQuery } from '@/entities/leaderboard/api';
+import { getRandomNumber } from '@/shared/utils/functions';
 
-import { DEFAULT_PER_PAGE, ENTRIES_LIMIT, START_PAGE } from "./config";
-import { Table } from "./ui";
+import { DEFAULT_PER_PAGE, ENTRIES_LIMIT, START_PAGE } from './config';
+import { Table } from './ui';
 
 export const Leaderboard: FC = () => {
   const { data } = useGetLeaderboardQuery({
@@ -27,15 +27,15 @@ export const Leaderboard: FC = () => {
   return (
     <Paper
       sx={{
-        width: "100%",
-        p: "5%",
+        width: '100%',
+        p: '5%',
       }}
     >
       <Typography variant="h3" component="h1">
         Leaderboard
       </Typography>
 
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: '100%' }}>
         {dataWithPlaces && (
           <Table
             data={dataWithPlaces}

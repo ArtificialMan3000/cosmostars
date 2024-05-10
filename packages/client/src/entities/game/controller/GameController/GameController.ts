@@ -1,5 +1,5 @@
-import { store } from "@/app/store";
-import { Sound } from "@/entities/game/ui/Sound/Sound";
+import { store } from '@/app/store';
+import { Sound } from '@/entities/game/ui/Sound/Sound';
 import {
   BaseGameColors,
   baseSpeed,
@@ -13,27 +13,27 @@ import {
   randomInterval,
   StarRadius,
   StarVelocity,
-} from "@/shared/constants";
-import { getRandomNumber } from "@/shared/utils/functions";
+} from '@/shared/constants';
+import { getRandomNumber } from '@/shared/utils/functions';
 
-import { Asteroid } from "../../model/Asteroid/Asteroid";
+import { Asteroid } from '../../model/Asteroid/Asteroid';
 import {
   asteroidFrequency,
   generateAsteroidConfig,
-} from "../../model/Asteroid/AsteroidConfig";
-import { BaseObject } from "../../model/BaseObject/BaseObject";
-import { EnemyGrid } from "../../model/EnemyGrid/EnemyGrid";
-import { Player } from "../../model/Player/Player";
-import { Star } from "../../model/Star/Star";
+} from '../../model/Asteroid/AsteroidConfig';
+import { BaseObject } from '../../model/BaseObject/BaseObject';
+import { EnemyGrid } from '../../model/EnemyGrid/EnemyGrid';
+import { Player } from '../../model/Player/Player';
+import { Star } from '../../model/Star/Star';
 import {
   decrementLives,
   incrementScoreByEnemy,
-} from "../../model/store/gameSlice";
-import { Canvas } from "../../ui/Canvas/Canvas";
-import { elementCoords } from "../../ui/Canvas/types";
-import { SpriteConstants } from "../../ui/Sprite/SpriteConfig";
-import { BonusController } from "../BonusController/BonusController";
-import { GameControllerType } from "./types";
+} from '../../model/store/gameSlice';
+import { Canvas } from '../../ui/Canvas/Canvas';
+import { elementCoords } from '../../ui/Canvas/types';
+import { SpriteConstants } from '../../ui/Sprite/SpriteConfig';
+import { BonusController } from '../BonusController/BonusController';
+import { GameControllerType } from './types';
 
 // класс игрового контроллера: включает в себя работу над игровыми объектами
 export class GameController {
@@ -276,7 +276,7 @@ export class GameController {
           enemy,
           () => {
             this.sound.playExplosion();
-            store.dispatch(incrementScoreByEnemy("BASIC"));
+            store.dispatch(incrementScoreByEnemy('BASIC'));
           }
         );
         this.player.projectiles = hitEnemy.newProjectiles;

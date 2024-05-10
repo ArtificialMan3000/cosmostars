@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export enum GameBlockPosition {
-  LEFT = "left",
-  RIGHT = "right",
+  LEFT = 'left',
+  RIGHT = 'right',
 }
 
 export type GameBlockType = {

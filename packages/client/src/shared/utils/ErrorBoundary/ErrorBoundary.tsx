@@ -1,5 +1,5 @@
-import { Alert } from "@mui/material";
-import React, { ErrorInfo, ReactNode } from "react";
+import { Alert } from '@mui/material';
+import React, { ErrorInfo, ReactNode } from 'react';
 
 type ErrorBoundaryState = {
   hasError: boolean;
@@ -21,7 +21,7 @@ export class ErrorBoundary extends React.Component<
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Uncaught error:", error, errorInfo);
+    console.error('Uncaught error:', error, errorInfo);
   }
 
   render() {

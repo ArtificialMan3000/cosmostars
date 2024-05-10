@@ -1,9 +1,9 @@
-import { InitialSizes } from "@/shared/constants";
+import { InitialSizes } from '@/shared/constants';
 
-import { SpriteConstants } from "../../ui/Sprite/SpriteConfig";
-import { BaseObject } from "../BaseObject/BaseObject";
-import { basicSize } from "../BaseObject/types";
-import { shootingObjectProps } from "./types";
+import { SpriteConstants } from '../../ui/Sprite/SpriteConfig';
+import { BaseObject } from '../BaseObject/BaseObject';
+import { basicSize } from '../BaseObject/types';
+import { shootingObjectProps } from './types';
 
 export class ShootingObject extends BaseObject {
   public projectiles: BaseObject[];

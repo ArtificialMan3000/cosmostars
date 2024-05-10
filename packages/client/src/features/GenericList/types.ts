@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 export type GenericListType<T> = {
   items: T[];

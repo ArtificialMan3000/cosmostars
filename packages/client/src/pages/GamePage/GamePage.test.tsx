@@ -1,18 +1,18 @@
-import { ReactElement } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { ReactElement } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import {
   shouldMatchSnapshot,
   shouldRenderWithoutError,
-} from "../tests/factories";
-import { GamePage } from "./GamePage";
+} from '../tests/factories';
+import { GamePage } from './GamePage';
 
-jest.mock("@/entities/game/controller/GameLoop/GameLoop");
-jest.mock("@/entities/game/ui/Sound/Sound");
+jest.mock('@/entities/game/controller/GameLoop/GameLoop');
+jest.mock('@/entities/game/ui/Sound/Sound');
 
 let Page: ReactElement;
 
-describe("Game Page", () => {
+describe('Game Page', () => {
   beforeEach(() => {
     Page = (
       <BrowserRouter>
@@ -21,11 +21,11 @@ describe("Game Page", () => {
     );
   });
 
-  it("should render without error", () => {
+  it('should render without error', () => {
     shouldRenderWithoutError(Page);
   });
 
-  it("should match snapshot", () => {
+  it('should match snapshot', () => {
     shouldMatchSnapshot(Page);
   });
 });

@@ -1,8 +1,8 @@
-import { InitialSizes } from "@/shared/constants";
-import { getRandomNumber } from "@/shared/utils/functions";
+import { InitialSizes } from '@/shared/constants';
+import { getRandomNumber } from '@/shared/utils/functions';
 
-import { Canvas } from "../../ui/Canvas/Canvas";
-import { SpinTypes, SpriteConstants } from "../../ui/Sprite/SpriteConfig";
+import { Canvas } from '../../ui/Canvas/Canvas';
+import { SpinTypes, SpriteConstants } from '../../ui/Sprite/SpriteConfig';
 
 export const asteroidFrequency = 200;
 

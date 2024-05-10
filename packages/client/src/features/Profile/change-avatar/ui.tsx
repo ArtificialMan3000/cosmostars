@@ -1,5 +1,5 @@
-import CloseIcon from "@mui/icons-material/Close";
-import UploadFileIcon from "@mui/icons-material/UploadFile";
+import CloseIcon from '@mui/icons-material/Close';
+import UploadFileIcon from '@mui/icons-material/UploadFile';
 import {
   Avatar,
   Box,
@@ -11,20 +11,20 @@ import {
   IconButton,
   Link,
   Typography,
-} from "@mui/material";
-import { useFormik } from "formik";
-import { ChangeEvent, DragEvent, useState } from "react";
+} from '@mui/material';
+import { useFormik } from 'formik';
+import { ChangeEvent, DragEvent, useState } from 'react';
 
 import {
   useChangeAvatarMutation,
   useGetUserQuery,
-} from "@/entities/user/model/api";
-import { avatarConverter } from "@/entities/user/model/converters";
-import { ThemeBorderRadius } from "@/shared/constants";
-import { initialAvatarForm } from "@/shared/constants/formInitials";
-import { configureResourcePath } from "@/shared/utils/configureUrl";
+} from '@/entities/user/model/api';
+import { avatarConverter } from '@/entities/user/model/converters';
+import { ThemeBorderRadius } from '@/shared/constants';
+import { initialAvatarForm } from '@/shared/constants/formInitials';
+import { configureResourcePath } from '@/shared/utils/configureUrl';
 
-import { ChangeAvatarSchema } from "../schemas/change-avatar";
+import { ChangeAvatarSchema } from '../schemas/change-avatar';
 
 export const ChangeAvatarForm = () => {
   const [changeAvatar] = useChangeAvatarMutation();
@@ -48,7 +48,7 @@ export const ChangeAvatarForm = () => {
   });
 
   const setNewAvatar = (newFile: Blob) => {
-    setFieldValue("avatar", newFile);
+    setFieldValue('avatar', newFile);
     setSelectedImage(URL.createObjectURL(newFile));
     setCurrentAvatar(URL.createObjectURL(newFile));
   };
@@ -82,11 +82,11 @@ export const ChangeAvatarForm = () => {
   };
 
   const props = {
-    className: "change-avatar",
-    title: "Avatar",
+    className: 'change-avatar',
+    title: 'Avatar',
     avatar: values.avatar,
     handleSubmit: handleSubmit,
-    btn: "save",
+    btn: 'save',
   };
   return (
     <Box
@@ -97,40 +97,40 @@ export const ChangeAvatarForm = () => {
     >
       <Card
         sx={{
-          my: "2rem",
-          background: "transparent",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-around",
-          alignItems: "center",
-          boxShadow: "none",
-          border: "none",
+          my: '2rem',
+          background: 'transparent',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          boxShadow: 'none',
+          border: 'none',
         }}
       >
         <CardHeader
-          titleTypographyProps={{ variant: "h3" }}
+          titleTypographyProps={{ variant: 'h3' }}
           title={props.title}
           sx={{
             padding: 0,
-            textAlign: "center",
+            textAlign: 'center',
           }}
         />
         <CardContent
           sx={{
             p: 0,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-around",
-            width: "80%",
-            height: "100%",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-around',
+            width: '80%',
+            height: '100%',
           }}
         >
           <Box
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              mb: "1rem",
+              display: 'flex',
+              justifyContent: 'center',
+              mb: '1rem',
             }}
           >
             <Avatar
@@ -142,15 +142,15 @@ export const ChangeAvatarForm = () => {
 
           <Box
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "152px",
-              maxWidht: "452px",
-              width: "100%",
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              height: '152px',
+              maxWidht: '452px',
+              width: '100%',
               border: `${
-                errors.avatar ? "1px dashed #f44336" : "1px dashed #E0E0E0"
+                errors.avatar ? '1px dashed #f44336' : '1px dashed #E0E0E0'
               }`,
               borderRadius: ThemeBorderRadius.MIN,
             }}
@@ -158,12 +158,12 @@ export const ChangeAvatarForm = () => {
             {drag ? (
               <Box
                 sx={{
-                  backgroundColor: "rgba(255,255,255,0.1)",
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  backgroundColor: 'rgba(255,255,255,0.1)',
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
                 }}
                 onDragStart={dragStartHandler}
                 onDragLeave={dragLeaveHandler}
@@ -177,17 +177,17 @@ export const ChangeAvatarForm = () => {
                 {selectedImage ? (
                   <Box
                     sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      position: "relative",
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      position: 'relative',
                     }}
                   >
                     <Box
                       sx={{
                         background: `no-repeat center/cover url(${selectedImage})`,
-                        display: "block",
+                        display: 'block',
                         height: 130,
                         width: 100,
                         borderRadius: ThemeBorderRadius.MIN,
@@ -196,7 +196,7 @@ export const ChangeAvatarForm = () => {
                     <IconButton
                       onClick={removeSelectedImage}
                       sx={{
-                        position: "absolute",
+                        position: 'absolute',
                         right: 0,
                         top: 0,
                       }}
@@ -208,12 +208,12 @@ export const ChangeAvatarForm = () => {
                 ) : (
                   <Box
                     sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "100%",
-                      height: "100%",
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      width: '100%',
+                      height: '100%',
                     }}
                     onDragStart={dragStartHandler}
                     onDragLeave={dragLeaveHandler}
@@ -222,7 +222,7 @@ export const ChangeAvatarForm = () => {
                     <UploadFileIcon />
                     <Typography>
                       <Link component="label">
-                        Click to upload{" "}
+                        Click to upload{' '}
                         <input
                           type="file"
                           name="avatar"
@@ -231,7 +231,7 @@ export const ChangeAvatarForm = () => {
                           accept="image/png, image/jpeg, image/jpg, image/svg, image/gif"
                           hidden
                         />
-                      </Link>{" "}
+                      </Link>{' '}
                       or drag and drop
                     </Typography>
                     <Box>
@@ -250,12 +250,12 @@ export const ChangeAvatarForm = () => {
           )}
           <CardActions
             sx={{
-              mt: "1.5rem",
+              mt: '1.5rem',
               padding: 0,
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
             }}
           >
             <Button type="submit" fullWidth variant="contained">

@@ -1,7 +1,7 @@
-import type { RequestHandler } from "express";
+import type { RequestHandler } from 'express';
 
-import { BaseStatuses } from "../constants";
-import { Like } from "../db/models/Like";
+import { BaseStatuses } from '../constants';
+import { Like } from '../db/models/Like';
 
 export const createLike: RequestHandler = async (req, res) => {
   const like = await Like.create({ ...req.body, user_id: req.user.ya_id });

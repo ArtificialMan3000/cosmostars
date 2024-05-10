@@ -1,12 +1,12 @@
-import { internalApi } from "@/shared/api/internalApi";
-import { HTTPMethods, InternalTags } from "@/shared/api/types";
-import { getErrorReason } from "@/shared/api/utils";
+import { internalApi } from '@/shared/api/internalApi';
+import { HTTPMethods, InternalTags } from '@/shared/api/types';
+import { getErrorReason } from '@/shared/api/utils';
 import {
   COMMENTS_API_ENDPOINT,
   TOPICS_API_ENDPOINT,
-} from "@/shared/constants/forum";
+} from '@/shared/constants/forum';
 
-import { AddCommentMutation, CommentDataRequest } from "./types";
+import { AddCommentMutation, CommentDataRequest } from './types';
 
 const commentsApi = internalApi.injectEndpoints({
   endpoints: (builder) => ({

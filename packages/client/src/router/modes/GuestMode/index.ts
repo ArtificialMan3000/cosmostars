@@ -1,1 +1,1 @@
-export * from "./GuestMode";
+export * from './GuestMode';

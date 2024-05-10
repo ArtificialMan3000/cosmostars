@@ -1,17 +1,17 @@
-import { ReactElement } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { ReactElement } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import {
   shouldMatchSnapshot,
   shouldRenderWithoutError,
-} from "../tests/factories";
-import { LeaderboardPage } from "./LeaderboardPage";
+} from '../tests/factories';
+import { LeaderboardPage } from './LeaderboardPage';
 
-jest.mock("@/entities/leaderboard/api");
+jest.mock('@/entities/leaderboard/api');
 
 let Page: ReactElement;
 
-describe("Leaderboard Page", () => {
+describe('Leaderboard Page', () => {
   beforeEach(() => {
     Page = (
       <BrowserRouter>
@@ -20,11 +20,11 @@ describe("Leaderboard Page", () => {
     );
   });
 
-  it("should render without error", () => {
+  it('should render without error', () => {
     shouldRenderWithoutError(Page);
   });
 
-  it("should match snapshot", () => {
+  it('should match snapshot', () => {
     shouldMatchSnapshot(Page);
   });
 });

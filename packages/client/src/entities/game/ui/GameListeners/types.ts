@@ -1,5 +1,5 @@
-import { Player } from "../../model/Player/Player";
-import { Sound } from "../Sound/Sound";
+import { Player } from '../../model/Player/Player';
+import { Sound } from '../Sound/Sound';
 
 export type GameListenersType = {
   canvas: HTMLCanvasElement;

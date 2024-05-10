@@ -1,7 +1,7 @@
-import { Box, IconButton, Typography } from "@mui/material";
-import { FC } from "react";
+import { Box, IconButton, Typography } from '@mui/material';
+import { FC } from 'react';
 
-import { TypographyButtonType } from "./types";
+import { TypographyButtonType } from './types';
 
 export const TypographyButton: FC<TypographyButtonType> = (props) => {
   const { icon, title, onClick } = props;
@@ -13,8 +13,8 @@ export const TypographyButton: FC<TypographyButtonType> = (props) => {
   return (
     <Box
       sx={{
-        display: "flex",
-        alignItems: "center",
+        display: 'flex',
+        alignItems: 'center',
       }}
     >
       <IconButton

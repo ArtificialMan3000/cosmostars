@@ -1,4 +1,4 @@
-import { getRandomNumber } from "@/shared/utils/functions";
+import { getRandomNumber } from '@/shared/utils/functions';
 
 export const generateRandomUserInfo = () => {
   const num = getRandomNumber(0, 1000);

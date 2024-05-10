@@ -1,1 +1,1 @@
-export * from "./PrivateMode";
+export * from './PrivateMode';

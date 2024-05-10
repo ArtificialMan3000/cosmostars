@@ -1,11 +1,11 @@
-import { useFormik } from "formik";
+import { useFormik } from 'formik';
 
-import { useChangePasswordMutation } from "@/entities/user/model/api";
-import { passwordConverter } from "@/entities/user/model/converters";
-import { initialPasswordForm } from "@/shared/constants/formInitials";
+import { useChangePasswordMutation } from '@/entities/user/model/api';
+import { passwordConverter } from '@/entities/user/model/converters';
+import { initialPasswordForm } from '@/shared/constants/formInitials';
 
-import { CardView } from "../../../shared/ui";
-import { ChangePasswordSchema } from "../schemas/change-password";
+import { CardView } from '../../../shared/ui';
+import { ChangePasswordSchema } from '../schemas/change-password';
 
 export const ChangePasswordForm = () => {
   const [changePassword] = useChangePasswordMutation();
@@ -19,42 +19,42 @@ export const ChangePasswordForm = () => {
   });
 
   const props = {
-    className: "change-password",
-    title: "Password",
+    className: 'change-password',
+    title: 'Password',
     handleSubmit: handleSubmit,
     fields: [
       {
-        id: "oldPassword",
-        label: "oldPassword",
-        name: "oldPassword",
+        id: 'oldPassword',
+        label: 'oldPassword',
+        name: 'oldPassword',
         value: values.oldPassword,
-        type: "password",
+        type: 'password',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.oldPassword,
       },
       {
-        id: "password",
-        label: "Password",
-        name: "password",
+        id: 'password',
+        label: 'Password',
+        name: 'password',
         value: values.password,
-        type: "password",
+        type: 'password',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.password,
       },
       {
-        id: "confirmPassword",
-        label: "Re-type password",
-        name: "confirmPassword",
+        id: 'confirmPassword',
+        label: 'Re-type password',
+        name: 'confirmPassword',
         value: values.confirmPassword,
-        type: "password",
+        type: 'password',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.confirmPassword,
       },
     ],
-    btn: "save",
+    btn: 'save',
   };
   return (
     <CardView

@@ -1,7 +1,7 @@
-import { SpinTypes } from "../../ui/Sprite/SpriteConfig";
-import { BaseObject } from "../BaseObject/BaseObject";
-import { basicVelocity } from "../BaseObject/types";
-import { AsteroidAngles, AsteroidProps } from "./types";
+import { SpinTypes } from '../../ui/Sprite/SpriteConfig';
+import { BaseObject } from '../BaseObject/BaseObject';
+import { basicVelocity } from '../BaseObject/types';
+import { AsteroidAngles, AsteroidProps } from './types';
 
 export class Asteroid extends BaseObject {
   private angle: AsteroidAngles;

@@ -1,4 +1,4 @@
-import { AuthorOfTopicData } from "./frontend";
+import { AuthorOfTopicData } from './frontend';
 
 export type AddTopicRequest = {
   title: string;

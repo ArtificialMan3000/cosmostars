@@ -1,2 +1,2 @@
-export { checkAuthMiddleware } from "./checkAuth";
-export { proxyMiddleware } from "./proxy";
+export { checkAuthMiddleware } from './checkAuth';
+export { proxyMiddleware } from './proxy';

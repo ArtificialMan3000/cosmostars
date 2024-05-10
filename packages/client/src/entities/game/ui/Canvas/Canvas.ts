@@ -1,7 +1,7 @@
-import { BaseGameColors, initialCoords } from "@/shared/constants";
+import { BaseGameColors, initialCoords } from '@/shared/constants';
 
-import { basicSize } from "../../model/BaseObject/types";
-import { elementCoords } from "./types";
+import { basicSize } from '../../model/BaseObject/types';
+import { elementCoords } from './types';
 
 // вспомогательный класс для работы с канвасом
 export class Canvas {
@@ -10,7 +10,7 @@ export class Canvas {
 
   constructor(canvasElement: HTMLCanvasElement) {
     this.canvas = canvasElement;
-    this.context = this.canvas.getContext("2d")!;
+    this.context = this.canvas.getContext('2d')!;
     this.canvas.width = this.width;
     this.canvas.height = this.height;
   }

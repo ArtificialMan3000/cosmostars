@@ -1,9 +1,9 @@
-import type { RequestHandler } from "express";
+import type { RequestHandler } from 'express';
 
-import { BaseStatuses } from "../constants";
-import { Comment } from "../db/models/Comment";
-import { Like } from "../db/models/Like";
-import { User } from "../db/models/User";
+import { BaseStatuses } from '../constants';
+import { Comment } from '../db/models/Comment';
+import { Like } from '../db/models/Like';
+import { User } from '../db/models/User';
 
 export const createComment: RequestHandler = async (req, res) => {
   const comment = await Comment.create({
@@ -13,7 +13,7 @@ export const createComment: RequestHandler = async (req, res) => {
   await comment.reload({
     include: {
       model: User,
-      attributes: ["ya_id", "login", "display_name", "avatar"],
+      attributes: ['ya_id', 'login', 'display_name', 'avatar'],
     },
   });
   return res.status(BaseStatuses.CREATED).json(comment);
@@ -27,7 +27,7 @@ export const getByTopicId: RequestHandler = async (req, res) => {
     include: [
       {
         model: Like,
-        attributes: ["user_id"],
+        attributes: ['user_id'],
         where: {
           user_id: req.user.ya_id,
         },
@@ -35,13 +35,13 @@ export const getByTopicId: RequestHandler = async (req, res) => {
       },
       {
         model: User,
-        attributes: ["ya_id", "login", "display_name", "avatar"],
+        attributes: ['ya_id', 'login', 'display_name', 'avatar'],
       },
     ],
     where: { topic_id: id },
     order: [
-      ["id", "ASC"],
-      ["parent_id", "ASC NULLS FIRST"],
+      ['id', 'ASC'],
+      ['parent_id', 'ASC NULLS FIRST'],
     ],
   });
 

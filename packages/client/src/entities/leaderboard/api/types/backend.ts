@@ -1,4 +1,4 @@
-import { LeaderData } from "./frontend";
+import { LeaderData } from './frontend';
 
 // * Types for backend api server
 export type LeaderboardNewLeaderRequest = {

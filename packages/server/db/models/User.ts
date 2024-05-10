@@ -5,9 +5,9 @@ import {
   Model,
   PrimaryKey,
   Table,
-} from "sequelize-typescript";
+} from 'sequelize-typescript';
 
-@Table({ tableName: "users", createdAt: "created_at", updatedAt: "updated_at" })
+@Table({ tableName: 'users', createdAt: 'created_at', updatedAt: 'updated_at' })
 export class User extends Model {
   @PrimaryKey
   @Column(DataType.INTEGER)

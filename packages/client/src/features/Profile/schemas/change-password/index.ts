@@ -1,6 +1,6 @@
-import * as yup from "yup";
+import * as yup from 'yup';
 
-import { ERROR_MESSAGES } from "@/shared/constants/error-messages";
+import { ERROR_MESSAGES } from '@/shared/constants/error-messages';
 
 export const ChangePasswordSchema = yup.object().shape({
   oldPassword: yup
@@ -13,6 +13,6 @@ export const ChangePasswordSchema = yup.object().shape({
     .required(ERROR_MESSAGES.REQUIRED_MSG),
   confirmPassword: yup
     .string()
-    .oneOf([yup.ref("password"), undefined], ERROR_MESSAGES.CONFIRM_ERROR_MSG)
+    .oneOf([yup.ref('password'), undefined], ERROR_MESSAGES.CONFIRM_ERROR_MSG)
     .required(ERROR_MESSAGES.REQUIRED_MSG),
 });

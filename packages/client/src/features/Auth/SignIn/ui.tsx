@@ -1,15 +1,15 @@
-import { Paper } from "@mui/material";
-import { useFormik } from "formik";
-import { PropsWithChildren } from "react";
+import { Paper } from '@mui/material';
+import { useFormik } from 'formik';
+import { PropsWithChildren } from 'react';
 
-import { YandexOAuth } from "@/features/Auth/YanedxOAuth";
-import { authTypes } from "@/shared/api";
-import { SignInRequest } from "@/shared/api/auth/models";
-import { RoutesName } from "@/shared/constants";
-import { CardView } from "@/shared/ui";
-import { cleanForm } from "@/shared/utils/clean";
+import { YandexOAuth } from '@/features/Auth/YanedxOAuth';
+import { authTypes } from '@/shared/api';
+import { SignInRequest } from '@/shared/api/auth/models';
+import { RoutesName } from '@/shared/constants';
+import { CardView } from '@/shared/ui';
+import { cleanForm } from '@/shared/utils/clean';
 
-import { signInSchema } from "../schemas/sign-in";
+import { signInSchema } from '../schemas/sign-in';
 
 export type SignInProps = PropsWithChildren<{
   handleSignIn: (userForm: authTypes.SignInRequest) => void;
@@ -18,8 +18,8 @@ export type SignInProps = PropsWithChildren<{
 export const SignIn = ({ handleSignIn }: SignInProps) => {
   const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: {
-      login: "",
-      password: "",
+      login: '',
+      password: '',
     },
     validationSchema: signInSchema,
     onSubmit: () => {
@@ -29,36 +29,36 @@ export const SignIn = ({ handleSignIn }: SignInProps) => {
   });
 
   const props = {
-    className: "sign-in",
-    title: "Login",
+    className: 'sign-in',
+    title: 'Login',
     handleSubmit: handleSubmit,
     fields: [
       {
-        id: "login",
-        label: "Login",
-        name: "login",
+        id: 'login',
+        label: 'Login',
+        name: 'login',
         value: values.login,
-        type: "text",
+        type: 'text',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.login,
       },
       {
-        id: "password",
-        label: "Password",
-        name: "password",
+        id: 'password',
+        label: 'Password',
+        name: 'password',
         value: values.password,
-        type: "password",
+        type: 'password',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.password,
       },
     ],
-    btn: "sign in",
-    link: "Create account?",
+    btn: 'sign in',
+    link: 'Create account?',
   };
   return (
-    <Paper className="form-paper" sx={{ my: "auto" }}>
+    <Paper className="form-paper" sx={{ my: 'auto' }}>
       <CardView
         handleSubmit={props.handleSubmit}
         className={props.className}

@@ -1,8 +1,8 @@
-import { AvatarForm } from "@/features/Profile/change-avatar/types";
-import { PasswordForm } from "@/features/Profile/change-password/types";
-import { cleanForm } from "@/shared/utils/clean";
+import { AvatarForm } from '@/features/Profile/change-avatar/types';
+import { PasswordForm } from '@/features/Profile/change-password/types';
+import { cleanForm } from '@/shared/utils/clean';
 
-import { UserPassword } from "./types";
+import { UserPassword } from './types';
 
 export const passwordConverter = (data: PasswordForm): UserPassword =>
   cleanForm({
@@ -12,7 +12,7 @@ export const passwordConverter = (data: PasswordForm): UserPassword =>
 
 export const avatarConverter = (data: AvatarForm): FormData => {
   const formData = new FormData();
-  formData.append("avatar", data.avatar!);
+  formData.append('avatar', data.avatar!);
 
   return formData;
 };

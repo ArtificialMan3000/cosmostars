@@ -1,7 +1,7 @@
-import { BaseGameColors } from "@/shared/constants";
+import { BaseGameColors } from '@/shared/constants';
 
-import { BaseObject } from "../BaseObject/BaseObject";
-import { StarProps } from "./types";
+import { BaseObject } from '../BaseObject/BaseObject';
+import { StarProps } from './types';
 
 export class Star extends BaseObject {
   public radius: number;

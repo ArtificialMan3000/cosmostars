@@ -1,20 +1,20 @@
-import { TimeoutId } from "@reduxjs/toolkit/dist/query/core/buildMiddleware/types";
+import { TimeoutId } from '@reduxjs/toolkit/dist/query/core/buildMiddleware/types';
 
-import { store } from "@/app/store";
+import { store } from '@/app/store';
 import {
   BonusTimeouts,
   PlayerState,
   PoweredShootingInterval,
-} from "@/shared/constants";
+} from '@/shared/constants';
 
-import { Sprite } from "../../ui/Sprite/Sprite";
+import { Sprite } from '../../ui/Sprite/Sprite';
 import {
   PlayerSkins,
   PlayerSkinsTypes,
   SpriteConstants,
-} from "../../ui/Sprite/SpriteConfig";
-import { ShootingObject } from "../ShootingObject/ShootingObject";
-import { shootingObjectProps } from "../ShootingObject/types";
+} from '../../ui/Sprite/SpriteConfig';
+import { ShootingObject } from '../ShootingObject/ShootingObject';
+import { shootingObjectProps } from '../ShootingObject/types';
 
 export class Player extends ShootingObject {
   public bonusState = PlayerState.DEFAULT;

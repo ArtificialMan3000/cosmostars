@@ -1,17 +1,17 @@
-import { ReactElement } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { ReactElement } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import {
   shouldMatchSnapshot,
   shouldRenderWithoutError,
-} from "../tests/factories";
-import { ProfilePage } from "./";
+} from '../tests/factories';
+import { ProfilePage } from './';
 
-jest.mock("@/entities/user/model/api");
+jest.mock('@/entities/user/model/api');
 
 let Page: ReactElement;
 
-describe("Profile Page", () => {
+describe('Profile Page', () => {
   beforeEach(() => {
     Page = (
       <BrowserRouter>
@@ -20,11 +20,11 @@ describe("Profile Page", () => {
     );
   });
 
-  it("should render without error", () => {
+  it('should render without error', () => {
     shouldRenderWithoutError(Page);
   });
 
-  it("should match snapshot", () => {
+  it('should match snapshot', () => {
     shouldMatchSnapshot(Page);
   });
 });

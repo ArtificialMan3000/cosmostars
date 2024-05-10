@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize';
 import {
   BelongsTo,
   Column,
@@ -7,13 +7,13 @@ import {
   HasMany,
   Model,
   Table,
-} from "sequelize-typescript";
+} from 'sequelize-typescript';
 
-import { Comment } from "./Comment";
-import { User } from "./User";
+import { Comment } from './Comment';
+import { User } from './User';
 
 @Table({
-  tableName: "topics",
+  tableName: 'topics',
   updatedAt: false,
 })
 export class Topic extends Model {

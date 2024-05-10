@@ -1,6 +1,6 @@
-import type { Response } from "express";
+import type { Response } from 'express';
 
-import { BaseStatuses, ErrorMessages } from "../constants/index";
+import { BaseStatuses, ErrorMessages } from '../constants/index';
 
 export const configureError = (
   response: Response,

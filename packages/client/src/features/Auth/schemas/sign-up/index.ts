@@ -1,7 +1,7 @@
-import * as yup from "yup";
+import * as yup from 'yup';
 
-import { ERROR_MESSAGES } from "@/shared/constants/error-messages";
-import { VALDIATION_REGEX } from "@/shared/constants/validation-regex";
+import { ERROR_MESSAGES } from '@/shared/constants/error-messages';
+import { VALDIATION_REGEX } from '@/shared/constants/validation-regex';
 
 export const signUpSchema = yup.object().shape({
   email: yup
@@ -18,7 +18,7 @@ export const signUpSchema = yup.object().shape({
     .required(ERROR_MESSAGES.REQUIRED_MSG),
   confirmPassword: yup
     .string()
-    .oneOf([yup.ref("password"), undefined], ERROR_MESSAGES.CONFIRM_ERROR_MSG)
+    .oneOf([yup.ref('password'), undefined], ERROR_MESSAGES.CONFIRM_ERROR_MSG)
     .required(ERROR_MESSAGES.REQUIRED_MSG),
   login: yup
     .string()

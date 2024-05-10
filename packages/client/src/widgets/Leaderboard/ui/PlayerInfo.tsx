@@ -1,14 +1,14 @@
-import { Avatar, Card, CardHeader } from "@mui/material";
-import { FC } from "react";
+import { Avatar, Card, CardHeader } from '@mui/material';
+import { FC } from 'react';
 
-import { configureResourcePath } from "@/shared/utils/configureUrl";
+import { configureResourcePath } from '@/shared/utils/configureUrl';
 
-import { PlayerData } from "./types";
-type PlayerInfoProps = Omit<PlayerData, "playerId">;
+import { PlayerData } from './types';
+type PlayerInfoProps = Omit<PlayerData, 'playerId'>;
 
 export const PlayerInfo: FC<PlayerInfoProps> = ({ name, img, email }) => {
   return (
-    <Card sx={{ background: "transparent", border: "none" }} elevation={0}>
+    <Card sx={{ background: 'transparent', border: 'none' }} elevation={0}>
       <CardHeader
         sx={{ padding: 0 }}
         avatar={

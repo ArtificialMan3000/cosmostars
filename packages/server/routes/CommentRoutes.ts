@@ -1,19 +1,19 @@
-import { Router } from "express";
-import { body } from "express-validator";
+import { Router } from 'express';
+import { body } from 'express-validator';
 
-import { ErrorMessages } from "../constants";
-import { createComment } from "../controllers/CommentController";
-import { validate } from "../middlewares/validation";
+import { ErrorMessages } from '../constants';
+import { createComment } from '../controllers/CommentController';
+import { validate } from '../middlewares/validation';
 
 const commentRouter = Router();
 
 commentRouter.post(
-  "/",
+  '/',
   validate([
-    body("comment", "comment - минимум 2 символа").isLength({ min: 2 }),
-    body(["topic_id"], ErrorMessages.NOT_EMPTY).exists(),
-    body(["topic_id"], ErrorMessages.IS_NUMERIC).isNumeric(),
-    body("parent_id", ErrorMessages.IS_NUMERIC)
+    body('comment', 'comment - минимум 2 символа').isLength({ min: 2 }),
+    body(['topic_id'], ErrorMessages.NOT_EMPTY).exists(),
+    body(['topic_id'], ErrorMessages.IS_NUMERIC).isNumeric(),
+    body('parent_id', ErrorMessages.IS_NUMERIC)
       .isNumeric()
       .optional({ nullable: true }),
   ]),

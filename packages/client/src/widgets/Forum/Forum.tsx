@@ -1,4 +1,4 @@
-import { ArrowForward, Search } from "@mui/icons-material";
+import { ArrowForward, Search } from '@mui/icons-material';
 import {
   Box,
   IconButton,
@@ -8,21 +8,21 @@ import {
   TablePagination,
   TextField,
   Typography,
-} from "@mui/material";
-import { useFormik } from "formik";
-import { FC, useState } from "react";
+} from '@mui/material';
+import { useFormik } from 'formik';
+import { FC, useState } from 'react';
 
 import {
   useAddTopicMutation,
   useGetTopicsQuery,
-} from "@/entities/forum/topics/api";
-import { AddTopic } from "@/features/AddTopic/AddTopic";
-import { GenericList } from "@/features/GenericList/GenericList";
-import { TopicItem } from "@/features/TopicItem/TopicItem";
-import { BasePerPage } from "@/shared/constants";
-import { searchValidation } from "@/shared/constants/validationShemas";
+} from '@/entities/forum/topics/api';
+import { AddTopic } from '@/features/AddTopic/AddTopic';
+import { GenericList } from '@/features/GenericList/GenericList';
+import { TopicItem } from '@/features/TopicItem/TopicItem';
+import { BasePerPage } from '@/shared/constants';
+import { searchValidation } from '@/shared/constants/validationShemas';
 
-import { useGetUserQuery } from "../../entities/user/model/api";
+import { useGetUserQuery } from '../../entities/user/model/api';
 
 export const Forum: FC = () => {
   const [addTopic] = useAddTopicMutation();
@@ -39,7 +39,7 @@ export const Forum: FC = () => {
 
   const formikSearch = useFormik({
     initialValues: {
-      search: "",
+      search: '',
     },
     validationSchema: searchValidation,
     onSubmit: (values) => {
@@ -63,9 +63,9 @@ export const Forum: FC = () => {
   return (
     <Paper
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
         padding: 3,
       }}
     >
@@ -74,11 +74,11 @@ export const Forum: FC = () => {
       </Typography>
       <Box
         sx={{
-          boxSizing: "border-box",
-          display: "flex",
-          alignItems: "center",
-          width: "100%",
-          justifyContent: "space-between",
+          boxSizing: 'border-box',
+          display: 'flex',
+          alignItems: 'center',
+          width: '100%',
+          justifyContent: 'space-between',
           px: 4,
         }}
       >
@@ -86,9 +86,9 @@ export const Forum: FC = () => {
           component="form"
           onSubmit={formikSearch.handleSubmit}
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "end",
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'end',
             flex: 1,
             my: 2,
             mr: 5,
@@ -131,8 +131,8 @@ export const Forum: FC = () => {
       <List
         sx={{
           flex: 1,
-          width: "100%",
-          overflowY: "auto",
+          width: '100%',
+          overflowY: 'auto',
         }}
       >
         {filtredTopics.length ? (
@@ -150,9 +150,9 @@ export const Forum: FC = () => {
       </List>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "flex-end",
-          width: "100%",
+          display: 'flex',
+          justifyContent: 'flex-end',
+          width: '100%',
         }}
       >
         <TablePagination
@@ -164,7 +164,7 @@ export const Forum: FC = () => {
           page={page}
           SelectProps={{
             inputProps: {
-              "aria-label": "rows per page",
+              'aria-label': 'rows per page',
             },
             native: true,
           }}

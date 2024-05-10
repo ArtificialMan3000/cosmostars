@@ -1,11 +1,11 @@
-import { store } from "@/app/store";
-import { Sound } from "@/entities/game/ui/Sound/Sound";
-import { BaseGameColors, GameStatuses } from "@/shared/constants";
+import { store } from '@/app/store';
+import { Sound } from '@/entities/game/ui/Sound/Sound';
+import { BaseGameColors, GameStatuses } from '@/shared/constants';
 
-import { setGameStatus } from "../../model/store/gameSlice";
-import { Canvas, initCanvas } from "../../ui/Canvas/Canvas";
-import { GameListeners } from "../../ui/GameListeners/GameListeners";
-import { GameController } from "../GameController/GameController";
+import { setGameStatus } from '../../model/store/gameSlice';
+import { Canvas, initCanvas } from '../../ui/Canvas/Canvas';
+import { GameListeners } from '../../ui/GameListeners/GameListeners';
+import { GameController } from '../GameController/GameController';
 
 // класс игрового цикла: включает в себя работу над состояниями игры
 export class GameLoop {

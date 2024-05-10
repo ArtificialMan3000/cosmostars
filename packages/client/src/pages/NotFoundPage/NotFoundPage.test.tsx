@@ -1,15 +1,15 @@
-import { ReactElement } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { ReactElement } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import {
   shouldMatchSnapshot,
   shouldRenderWithoutError,
-} from "../tests/factories";
-import { NotFoundPage } from "./NotFoundPage";
+} from '../tests/factories';
+import { NotFoundPage } from './NotFoundPage';
 
 let Page: ReactElement;
 
-describe("Not Found Page", () => {
+describe('Not Found Page', () => {
   beforeEach(() => {
     Page = (
       <BrowserRouter>
@@ -18,11 +18,11 @@ describe("Not Found Page", () => {
     );
   });
 
-  it("should render without error", () => {
+  it('should render without error', () => {
     shouldRenderWithoutError(Page);
   });
 
-  it("should match snapshot", () => {
+  it('should match snapshot', () => {
     shouldMatchSnapshot(Page);
   });
 });

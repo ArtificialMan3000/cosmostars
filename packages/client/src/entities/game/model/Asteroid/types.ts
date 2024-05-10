@@ -1,5 +1,5 @@
-import { SpinTypes } from "../../ui/Sprite/SpriteConfig";
-import { baseObjectProps } from "../BaseObject/types";
+import { SpinTypes } from '../../ui/Sprite/SpriteConfig';
+import { baseObjectProps } from '../BaseObject/types';
 
 export enum AsteroidAngles {
   RIGHT = 1,

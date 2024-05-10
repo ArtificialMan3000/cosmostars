@@ -1,15 +1,15 @@
-import { ReactElement } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { ReactElement } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import {
   shouldMatchSnapshot,
   shouldRenderWithoutError,
-} from "../tests/factories";
-import { SignInPage } from "./";
+} from '../tests/factories';
+import { SignInPage } from './';
 
 let Page: ReactElement;
 
-describe.skip("Sign In Page", () => {
+describe.skip('Sign In Page', () => {
   beforeEach(() => {
     Page = (
       <BrowserRouter>
@@ -18,11 +18,11 @@ describe.skip("Sign In Page", () => {
     );
   });
 
-  it("should render without error", () => {
+  it('should render without error', () => {
     shouldRenderWithoutError(Page);
   });
 
-  it("should match snapshot", () => {
+  it('should match snapshot', () => {
     shouldMatchSnapshot(Page);
   });
 });

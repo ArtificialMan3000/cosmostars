@@ -1,9 +1,9 @@
-import { internalApi } from "@/shared/api/internalApi";
-import { HTTPMethods, InternalTags } from "@/shared/api/types";
-import { getErrorReason } from "@/shared/api/utils";
-import { THEME_ENDPOINT } from "@/shared/constants/api";
+import { internalApi } from '@/shared/api/internalApi';
+import { HTTPMethods, InternalTags } from '@/shared/api/types';
+import { getErrorReason } from '@/shared/api/utils';
+import { THEME_ENDPOINT } from '@/shared/constants/api';
 
-import { ThemeCreationData, ThemeData } from "./types";
+import { ThemeCreationData, ThemeData } from './types';
 
 const themeApi = internalApi.injectEndpoints({
   endpoints: (builder) => ({

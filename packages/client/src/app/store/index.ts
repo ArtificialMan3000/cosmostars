@@ -1,23 +1,23 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import {
   PERSIST,
   persistReducer,
   persistStore,
   REHYDRATE,
-} from "redux-persist";
-import storage from "redux-persist/lib/storage";
+} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
-import { gameReducer } from "@/entities/game/model/store/gameSlice";
+import { gameReducer } from '@/entities/game/model/store/gameSlice';
 import {
   notificationMiddleware,
   notificationReducer,
-} from "@/entities/notification";
-import { authReducer } from "@/entities/user/model/user";
-import { internalApi } from "@/shared/api/internalApi";
-import { yandexApi } from "@/shared/api/yandexApi";
+} from '@/entities/notification';
+import { authReducer } from '@/entities/user/model/user';
+import { internalApi } from '@/shared/api/internalApi';
+import { yandexApi } from '@/shared/api/yandexApi';
 
 const config = {
-  key: "root",
+  key: 'root',
   storage,
 };
 
@@ -33,7 +33,7 @@ export const reducer = combineReducers({
 
 export const store = configureStore({
   preloadedState:
-    typeof window !== "undefined" ? window.__PRELOADED_STATE__ : undefined,
+    typeof window !== 'undefined' ? window.__PRELOADED_STATE__ : undefined,
   reducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

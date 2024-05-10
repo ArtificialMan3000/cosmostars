@@ -1,16 +1,16 @@
-import { useFormik } from "formik";
-import { useEffect, useState } from "react";
+import { useFormik } from 'formik';
+import { useEffect, useState } from 'react';
 
 import {
   useChangeProfileMutation,
   useGetUserQuery,
-} from "@/entities/user/model/api";
-import { UserProfile } from "@/entities/user/model/types";
-import { initialProfileForm } from "@/shared/constants/formInitials";
-import { cleanForm } from "@/shared/utils/clean";
+} from '@/entities/user/model/api';
+import { UserProfile } from '@/entities/user/model/types';
+import { initialProfileForm } from '@/shared/constants/formInitials';
+import { cleanForm } from '@/shared/utils/clean';
 
-import { CardView } from "../../../shared/ui";
-import { ChangeProfileSchema } from "../schemas/change-profile";
+import { CardView } from '../../../shared/ui';
+import { ChangeProfileSchema } from '../schemas/change-profile';
 
 export const ChangeProfileForm = () => {
   const [changeProfile] = useChangeProfileMutation();
@@ -34,72 +34,72 @@ export const ChangeProfileForm = () => {
   });
 
   const props = {
-    className: "change-profile",
-    title: "Profile",
+    className: 'change-profile',
+    title: 'Profile',
     handleSubmit: handleSubmit,
     fields: [
       {
-        id: "email",
-        label: "Email",
-        name: "email",
+        id: 'email',
+        label: 'Email',
+        name: 'email',
         value: values.email,
-        type: "email",
+        type: 'email',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.email,
       },
       {
-        id: "login",
-        label: "Login",
-        name: "login",
+        id: 'login',
+        label: 'Login',
+        name: 'login',
         value: values.login,
-        type: "text",
+        type: 'text',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.login,
       },
       {
-        id: "first_name",
-        label: "Name",
-        name: "first_name",
+        id: 'first_name',
+        label: 'Name',
+        name: 'first_name',
         value: values.first_name,
-        type: "text",
+        type: 'text',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.first_name,
       },
       {
-        id: "second_name",
-        label: "Second name",
-        name: "second_name",
+        id: 'second_name',
+        label: 'Second name',
+        name: 'second_name',
         value: values.second_name,
-        type: "text",
+        type: 'text',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.second_name,
       },
       {
-        id: "display_name",
-        label: "Display name",
-        name: "display_name",
-        value: values.display_name ?? "",
-        type: "text",
+        id: 'display_name',
+        label: 'Display name',
+        name: 'display_name',
+        value: values.display_name ?? '',
+        type: 'text',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.display_name,
       },
       {
-        id: "phone",
-        label: "Phone",
-        name: "phone",
-        value: values.phone ?? "",
-        type: "text",
+        id: 'phone',
+        label: 'Phone',
+        name: 'phone',
+        value: values.phone ?? '',
+        type: 'text',
         onChange: handleChange,
         onBlur: handleBlur,
         error: errors.phone,
       },
     ],
-    btn: "Save",
+    btn: 'Save',
   };
   return (
     <CardView

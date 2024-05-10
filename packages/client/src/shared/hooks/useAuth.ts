@@ -1,26 +1,26 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-import { useLazyGetUserQuery } from "@/entities/user/model/api";
+import { useLazyGetUserQuery } from '@/entities/user/model/api';
 import {
   resetAuth,
   selectIsAuth,
   setIsAuth,
   setUser,
-} from "@/entities/user/model/user";
+} from '@/entities/user/model/user';
 import {
   useLogoutMutation,
   useSignInMutation,
   useSignUpMutation,
-} from "@/shared/api/auth/auth";
+} from '@/shared/api/auth/auth';
 
 import {
   SignInRequest,
   SignInResponse,
   SignUpRequest,
   SignUpResponse,
-} from "../api/auth/models";
-import { useAppDispatch } from "./store";
+} from '../api/auth/models';
+import { useAppDispatch } from './store';
 
 export const useAuth = () => {
   const dispatch = useAppDispatch();
@@ -68,7 +68,7 @@ export const useAuth = () => {
   };
 
   const logoutAuth = async () => {
-    await logout("");
+    await logout('');
     dispatch(resetAuth());
   };
   return {

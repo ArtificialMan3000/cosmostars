@@ -1,21 +1,21 @@
-import EmailIcon from "@mui/icons-material/Email";
-import SettingsIcon from "@mui/icons-material/Settings";
-import StarIcon from "@mui/icons-material/Star";
-import { PaletteColorOptions } from "@mui/material";
-import { purple } from "@mui/material/colors";
+import EmailIcon from '@mui/icons-material/Email';
+import SettingsIcon from '@mui/icons-material/Settings';
+import StarIcon from '@mui/icons-material/Star';
+import { PaletteColorOptions } from '@mui/material';
+import { purple } from '@mui/material/colors';
 
-import LooseLeft from "@/assets/images/loose-modal-bottom-left.png";
-import LooseRight from "@/assets/images/loose-modal-top-right.png";
-import WinLeft from "@/assets/images/win-modal-bottom-left.png";
-import WinRight from "@/assets/images/win-modal-top-right.png";
+import LooseLeft from '@/assets/images/loose-modal-bottom-left.png';
+import LooseRight from '@/assets/images/loose-modal-top-right.png';
+import WinLeft from '@/assets/images/win-modal-bottom-left.png';
+import WinRight from '@/assets/images/win-modal-top-right.png';
 import {
   basicSize,
   basicVelocity,
-} from "@/entities/game/model/BaseObject/types";
-import { elementCoords } from "@/entities/game/ui/Canvas/types";
-import { SpriteConstants } from "@/entities/game/ui/Sprite/SpriteConfig";
-import { MenuLinkType } from "@/features/MenuLink/types";
-import { GameModalProps } from "@/widgets/GameModal/types";
+} from '@/entities/game/model/BaseObject/types';
+import { elementCoords } from '@/entities/game/ui/Canvas/types';
+import { SpriteConstants } from '@/entities/game/ui/Sprite/SpriteConfig';
+import { MenuLinkType } from '@/features/MenuLink/types';
+import { GameModalProps } from '@/widgets/GameModal/types';
 
 export const SERVER_URL = `http://localhost:${__SERVER_PORT__}`;
 
@@ -49,13 +49,13 @@ export enum GameStatuses {
 }
 
 export enum BaseGameColors {
-  RED = "#ff0000",
-  YELLOW = "#ffff00",
-  BLACK = "#000000",
-  BLUE = "#23A9F2",
-  GREEN = "#3AD900",
-  PURPLE = "#ba68c8",
-  WHITE = "#ffffff",
+  RED = '#ff0000',
+  YELLOW = '#ffff00',
+  BLACK = '#000000',
+  BLUE = '#23A9F2',
+  GREEN = '#3AD900',
+  PURPLE = '#ba68c8',
+  WHITE = '#ffffff',
 }
 
 export const hitEffectOpacity = 0.2;
@@ -105,37 +105,37 @@ export const GameModalConfig: Record<GameStatuses, GameModalProps | null> = {
   [GameStatuses.NOT_ACTIVE]: null,
   [GameStatuses.ACTIVE]: null,
   [GameStatuses.START]: {
-    title: "Start",
-    startButton: "Start",
+    title: 'Start',
+    startButton: 'Start',
     rulesVisibility: true,
     clearStateOnStart: true,
   },
   [GameStatuses.LOOSE]: {
-    title: "Looser!",
-    startButton: "Try again",
+    title: 'Looser!',
+    startButton: 'Try again',
     scoreVisibility: true,
     rightImg: LooseRight,
     leftImg: LooseLeft,
     clearStateOnStart: true,
   },
   [GameStatuses.WIN]: {
-    title: "Winner!",
-    startButton: "Try again",
+    title: 'Winner!',
+    startButton: 'Try again',
     scoreVisibility: true,
     rightImg: WinRight,
     leftImg: WinLeft,
     clearStateOnStart: true,
   },
   [GameStatuses.PAUSED]: {
-    title: "Pause",
-    startButton: "Resume",
+    title: 'Pause',
+    startButton: 'Resume',
     scoreVisibility: true,
     canBeResumed: true,
     rulesVisibility: true,
   },
   [GameStatuses.UPDATING]: {
-    title: "Game was paused!",
-    startButton: "Resume",
+    title: 'Game was paused!',
+    startButton: 'Resume',
     scoreVisibility: true,
   },
 };
@@ -147,25 +147,25 @@ export enum GameModalImageAlign {
 
 export const GameModalImageProps = {
   [GameModalImageAlign.RIGHT]: {
-    top: "-30%",
-    right: "-15%",
+    top: '-30%',
+    right: '-15%',
   },
   [GameModalImageAlign.LEFT]: {
-    bottom: "-30%",
-    left: "-15%",
+    bottom: '-30%',
+    left: '-15%',
   },
 };
 
 export enum ThemeNames {
-  LIGHT = "light",
-  DARK = "dark",
+  LIGHT = 'light',
+  DARK = 'dark',
 }
 
 export enum ThemeColors {
-  WHITE = "#ffffff",
-  BLACK = "#000000",
-  WHITE_GRADIENT = "linear-gradient(180deg, rgba(255, 255, 255, 0.6175) 0%, rgba(255, 255, 255, 0.6175) 100%)",
-  BLACK_GRADIENT = "linear-gradient(152.97deg, rgba(0, 0, 0, 0.4655) 15.24%, rgba(0, 0, 0, 0.95) 115.24%)",
+  WHITE = '#ffffff',
+  BLACK = '#000000',
+  WHITE_GRADIENT = 'linear-gradient(180deg, rgba(255, 255, 255, 0.6175) 0%, rgba(255, 255, 255, 0.6175) 100%)',
+  BLACK_GRADIENT = 'linear-gradient(152.97deg, rgba(0, 0, 0, 0.4655) 15.24%, rgba(0, 0, 0, 0.95) 115.24%)',
 }
 
 export const ThemeConfig = {
@@ -189,40 +189,40 @@ export const ThemePrimaryButton: PaletteColorOptions = {
 };
 
 export enum ThemeBorderRadius {
-  MIN = "4px",
-  PAPER = "12px",
-  BUTTON = "32px",
+  MIN = '4px',
+  PAPER = '12px',
+  BUTTON = '32px',
 }
 
 export enum RoutesName {
-  MAIN = "/",
-  PROFILE = "/profile",
-  LEADERBOARD = "/leaderboard",
-  FORUM = "/forum",
-  GAME = "/game",
-  LOGIN = "/login",
-  REGISTRATION = "/registration",
-  FORUM_DETAIL = "/forum/:id",
-  NOT_FOUND = "/not-found",
+  MAIN = '/',
+  PROFILE = '/profile',
+  LEADERBOARD = '/leaderboard',
+  FORUM = '/forum',
+  GAME = '/game',
+  LOGIN = '/login',
+  REGISTRATION = '/registration',
+  FORUM_DETAIL = '/forum/:id',
+  NOT_FOUND = '/not-found',
 }
 
 export const MenuItems: MenuLinkType[] = [
   {
-    title: "Main", // TODO: придумать логотип и вставить сюда как иконку
+    title: 'Main', // TODO: придумать логотип и вставить сюда как иконку
     path: RoutesName.MAIN,
   },
   {
-    title: "Profile",
+    title: 'Profile',
     icon: <SettingsIcon fontSize="small" />,
     path: RoutesName.PROFILE,
   },
   {
-    title: "Leaderboard",
+    title: 'Leaderboard',
     icon: <StarIcon fontSize="small" />,
     path: RoutesName.LEADERBOARD,
   },
   {
-    title: "Forum",
+    title: 'Forum',
     icon: <EmailIcon fontSize="small" />,
     path: RoutesName.FORUM,
   },

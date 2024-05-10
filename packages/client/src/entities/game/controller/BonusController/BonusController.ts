@@ -1,18 +1,18 @@
-import { store } from "@/app/store";
+import { store } from '@/app/store';
 import {
   BonusVelocity,
   InitialSizes,
   PlayerLives,
   PlayerState,
-} from "@/shared/constants";
-import { getRandomNumber } from "@/shared/utils/functions";
+} from '@/shared/constants';
+import { getRandomNumber } from '@/shared/utils/functions';
 
-import { BaseObject } from "../../model/BaseObject/BaseObject";
-import { Player } from "../../model/Player/Player";
-import { incrementLives, resetLives } from "../../model/store";
-import { Canvas } from "../../ui/Canvas/Canvas";
-import { SpriteConstants } from "../../ui/Sprite/SpriteConfig";
-import { BonusControllerType } from "./types";
+import { BaseObject } from '../../model/BaseObject/BaseObject';
+import { Player } from '../../model/Player/Player';
+import { incrementLives, resetLives } from '../../model/store';
+import { Canvas } from '../../ui/Canvas/Canvas';
+import { SpriteConstants } from '../../ui/Sprite/SpriteConfig';
+import { BonusControllerType } from './types';
 
 export class BonusController {
   private scene: Canvas;

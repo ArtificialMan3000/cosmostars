@@ -1,12 +1,12 @@
-import { Collapse } from "@mui/material";
-import { FC, useState } from "react";
+import { Collapse } from '@mui/material';
+import { FC, useState } from 'react';
 
-import { CommentFrameWidth, MinimizeWidth } from "@/shared/constants";
+import { CommentFrameWidth, MinimizeWidth } from '@/shared/constants';
 
-import { GenericList } from "../GenericList/GenericList";
-import { TopicItem } from "../TopicItem/TopicItem";
-import { commentConverter } from "./converter";
-import { CommentComponentType } from "./types";
+import { GenericList } from '../GenericList/GenericList';
+import { TopicItem } from '../TopicItem/TopicItem';
+import { commentConverter } from './converter';
+import { CommentComponentType } from './types';
 
 export const Comment: FC<CommentComponentType> = (props) => {
   const [open, setOpen] = useState(true);

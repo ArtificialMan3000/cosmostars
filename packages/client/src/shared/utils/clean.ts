@@ -1,4 +1,4 @@
-import DOMPurify from "dompurify";
+import DOMPurify from 'dompurify';
 
 export const clean = (source: string) => DOMPurify.sanitize(source);
 

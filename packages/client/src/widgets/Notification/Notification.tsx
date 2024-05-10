@@ -1,9 +1,9 @@
-import { Alert, Snackbar } from "@mui/material";
-import { FC } from "react";
+import { Alert, Snackbar } from '@mui/material';
+import { FC } from 'react';
 
-import { clearNotification } from "@/entities/notification";
-import { selectNotification } from "@/entities/notification/selectors";
-import { useAppDispatch, useAppSelector } from "@/shared/hooks/store";
+import { clearNotification } from '@/entities/notification';
+import { selectNotification } from '@/entities/notification/selectors';
+import { useAppDispatch, useAppSelector } from '@/shared/hooks/store';
 
 export const Notification: FC = () => {
   const dispatch = useAppDispatch();
@@ -18,13 +18,13 @@ export const Notification: FC = () => {
           key={id}
           open={true}
           onClose={(_evt, reason) => {
-            if (reason !== "clickaway") {
+            if (reason !== 'clickaway') {
               dispatch(clearNotification());
             }
           }}
           autoHideDuration={6000}
         >
-          <Alert severity={type ?? "info"} variant="filled">
+          <Alert severity={type ?? 'info'} variant="filled">
             {text}
           </Alert>
         </Snackbar>

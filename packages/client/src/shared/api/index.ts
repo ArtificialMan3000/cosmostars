@@ -1,2 +1,2 @@
-export * as authApi from "./auth";
-export * as authTypes from "./auth/models";
+export * as authApi from './auth';
+export * as authTypes from './auth/models';

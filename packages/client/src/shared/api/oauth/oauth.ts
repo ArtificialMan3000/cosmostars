@@ -1,7 +1,7 @@
-import { Method, OAUTH } from "@/shared/constants/api";
+import { Method, OAUTH } from '@/shared/constants/api';
 
-import { getErrorReason } from "../utils";
-import { yandexApi } from "../yandexApi";
+import { getErrorReason } from '../utils';
+import { yandexApi } from '../yandexApi';
 
 const OAUTH_URL = {
   SERVICE_ID: `${OAUTH}/service-id`,
@@ -14,8 +14,8 @@ export const oauthApi = yandexApi.injectEndpoints({
         url: OAUTH,
         method: Method.POST,
         body: signInYandexOAuthRequest,
-        credentials: "include",
-        responseHandler: "content-type",
+        credentials: 'include',
+        responseHandler: 'content-type',
       }),
       transformErrorResponse(response) {
         return getErrorReason(response);
@@ -25,7 +25,7 @@ export const oauthApi = yandexApi.injectEndpoints({
       query: (redirect_uri) => ({
         url: OAUTH_URL.SERVICE_ID,
         params: { redirect_uri: redirect_uri },
-        responseHandler: "content-type",
+        responseHandler: 'content-type',
       }),
     }),
   }),

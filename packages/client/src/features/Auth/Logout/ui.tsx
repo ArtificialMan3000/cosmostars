@@ -1,7 +1,7 @@
-import LogoutIcon from "@mui/icons-material/Logout";
-import { IconButton } from "@mui/material";
+import LogoutIcon from '@mui/icons-material/Logout';
+import { IconButton } from '@mui/material';
 
-import { useAuth } from "@/shared/hooks/useAuth";
+import { useAuth } from '@/shared/hooks/useAuth';
 export const Logout = () => {
   const { logoutAuth } = useAuth();
   return (

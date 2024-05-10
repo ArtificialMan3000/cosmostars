@@ -1,7 +1,7 @@
-import { basicSize } from "../../model/BaseObject/types";
-import { Canvas } from "../Canvas/Canvas";
-import { elementCoords } from "../Canvas/types";
-import { SpriteConstants } from "./SpriteConfig";
+import { basicSize } from '../../model/BaseObject/types';
+import { Canvas } from '../Canvas/Canvas';
+import { elementCoords } from '../Canvas/types';
+import { SpriteConstants } from './SpriteConfig';
 
 export type SpriteType = {
   canvas: Canvas;

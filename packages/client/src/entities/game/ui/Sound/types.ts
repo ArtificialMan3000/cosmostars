@@ -8,10 +8,10 @@ export type GameSounds = {
 };
 export type BufferListType = Record<keyof GameSounds, AudioBuffer | null>;
 export enum Sounds {
-  SHOT = "shot",
-  WIN = "win",
-  GAMEOVER = "gameover",
-  EXPLOSION = "explosion",
-  BACKGROUND = "background",
-  BONUS = "bonus",
+  SHOT = 'shot',
+  WIN = 'win',
+  GAMEOVER = 'gameover',
+  EXPLOSION = 'explosion',
+  BACKGROUND = 'background',
+  BONUS = 'bonus',
 }

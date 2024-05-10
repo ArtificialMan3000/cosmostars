@@ -1,22 +1,22 @@
-import ReplyIcon from "@mui/icons-material/Reply";
+import ReplyIcon from '@mui/icons-material/Reply';
 import {
   Box,
   CircularProgress,
   IconButton,
   Paper,
   Typography,
-} from "@mui/material";
-import { FC, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+} from '@mui/material';
+import { FC, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
-import { useGetCommentsQuery } from "@/entities/forum/comments/api";
-import { useGetOneTopicQuery } from "@/entities/forum/topics/api";
-import { Comment } from "@/features/Comment/Comment";
-import { CommentForm } from "@/features/CommentForm/CommentForm";
-import { GenericList } from "@/features/GenericList/GenericList";
-import { TopicItem } from "@/features/TopicItem/TopicItem";
-import { RoutesName } from "@/shared/constants";
-import { MainLayout } from "@/shared/layouts/MainLayout";
+import { useGetCommentsQuery } from '@/entities/forum/comments/api';
+import { useGetOneTopicQuery } from '@/entities/forum/topics/api';
+import { Comment } from '@/features/Comment/Comment';
+import { CommentForm } from '@/features/CommentForm/CommentForm';
+import { GenericList } from '@/features/GenericList/GenericList';
+import { TopicItem } from '@/features/TopicItem/TopicItem';
+import { RoutesName } from '@/shared/constants';
+import { MainLayout } from '@/shared/layouts/MainLayout';
 
 export const ForumTopicPage: FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -46,10 +46,10 @@ export const ForumTopicPage: FC = () => {
       {!currentTopic && loading ? (
         <Box
           sx={{
-            m: "auto",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            m: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
           }}
         >
           <Typography variant="h4" textAlign="center">
@@ -60,27 +60,27 @@ export const ForumTopicPage: FC = () => {
       ) : (
         <Paper
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "80%",
-            width: "80%",
-            my: "3%",
-            mx: "auto",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '80%',
+            width: '80%',
+            my: '3%',
+            mx: 'auto',
             padding: 3,
           }}
         >
           <Box
             sx={{
-              display: "flex",
-              alignItems: "center",
-              width: "100%",
+              display: 'flex',
+              alignItems: 'center',
+              width: '100%',
             }}
           >
             <IconButton
               sx={{
-                position: "absolute",
+                position: 'absolute',
               }}
               onClick={handleNavigateForum}
             >
@@ -90,7 +90,7 @@ export const ForumTopicPage: FC = () => {
               variant="h2"
               component="h1"
               className="topic-page__name"
-              m={"auto"}
+              m={'auto'}
             >
               {currentTopic?.title}
             </Typography>

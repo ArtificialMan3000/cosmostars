@@ -1,10 +1,10 @@
-import { Table as MuiTable } from "@mui/material";
-import { FC, useState } from "react";
+import { Table as MuiTable } from '@mui/material';
+import { FC, useState } from 'react';
 
-import { TableBody } from "./TableBody";
-import { TableFooter } from "./TableFooter";
-import { TableHead } from "./TableHead";
-import { RowData } from "./types";
+import { TableBody } from './TableBody';
+import { TableFooter } from './TableFooter';
+import { TableHead } from './TableHead';
+import { RowData } from './types';
 
 type TableProps = {
   data: RowData[];

@@ -1,4 +1,4 @@
-import { ThemeNames } from "@/shared/constants";
+import { ThemeNames } from '@/shared/constants';
 
 export type ThemeData = {
   id: number;

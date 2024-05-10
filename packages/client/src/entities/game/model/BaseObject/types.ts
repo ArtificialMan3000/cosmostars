@@ -1,6 +1,6 @@
-import { Canvas } from "../../ui/Canvas/Canvas";
-import { elementCoords } from "../../ui/Canvas/types";
-import { SpriteConstants } from "../../ui/Sprite/SpriteConfig";
+import { Canvas } from '../../ui/Canvas/Canvas';
+import { elementCoords } from '../../ui/Canvas/types';
+import { SpriteConstants } from '../../ui/Sprite/SpriteConfig';
 
 export type basicVelocity = {
   dx: number;

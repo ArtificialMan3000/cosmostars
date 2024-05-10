@@ -1,16 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-import { NotificationTypes } from "./types";
+import { NotificationTypes } from './types';
 
 type NotificationState = {
   id: string | null;
   type: NotificationTypes | null;
   text: string;
 };
-const initialState: NotificationState = { id: null, type: null, text: "" };
+const initialState: NotificationState = { id: null, type: null, text: '' };
 
 const notificationSlice = createSlice({
-  name: "notification",
+  name: 'notification',
   initialState,
   reducers: {
     setNotification: (state, { payload: { id, type, text } }) => {

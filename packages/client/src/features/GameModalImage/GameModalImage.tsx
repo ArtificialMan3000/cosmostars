@@ -1,9 +1,9 @@
-import { Box } from "@mui/material";
-import { FC } from "react";
+import { Box } from '@mui/material';
+import { FC } from 'react';
 
-import { GameModalImageProps } from "@/shared/constants";
+import { GameModalImageProps } from '@/shared/constants';
 
-import { GameModalImageTypes } from "./types";
+import { GameModalImageTypes } from './types';
 
 export const GameModalImage: FC<GameModalImageTypes> = (props) => {
   const { type, image } = props;
@@ -13,9 +13,9 @@ export const GameModalImage: FC<GameModalImageTypes> = (props) => {
     <Box
       sx={{
         background: `no-repeat center/contain url(${image})`,
-        position: "absolute",
-        width: "250px",
-        height: "250px",
+        position: 'absolute',
+        width: '250px',
+        height: '250px',
         ...imageConfig,
       }}
     />

@@ -1,15 +1,15 @@
-import axios from "axios";
-import type { RequestHandler } from "express";
+import axios from 'axios';
+import type { RequestHandler } from 'express';
 
-import { BaseStatuses, ErrorMessages, YANDEX_URL } from "../constants";
-import type { YandexUserType } from "../constants/types";
-import { User } from "../db/models/User";
-import { configureError } from "../utils/configureError";
+import { BaseStatuses, ErrorMessages, YANDEX_URL } from '../constants';
+import type { YandexUserType } from '../constants/types';
+import { User } from '../db/models/User';
+import { configureError } from '../utils/configureError';
 
 export const axiosInstance = axios.create({
   baseURL: YANDEX_URL,
   headers: {
-    "content-type": "application/json",
+    'content-type': 'application/json',
   },
   withCredentials: true,
 });

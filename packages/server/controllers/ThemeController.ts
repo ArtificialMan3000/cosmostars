@@ -1,8 +1,8 @@
-import type { Request, RequestHandler, Response } from "express";
+import type { Request, RequestHandler, Response } from 'express';
 
-import { BaseStatuses, ErrorMessages, ThemeModes } from "../constants";
-import { Theme } from "../db/models/Theme";
-import { configureError } from "../utils/configureError";
+import { BaseStatuses, ErrorMessages, ThemeModes } from '../constants';
+import { Theme } from '../db/models/Theme';
+import { configureError } from '../utils/configureError';
 
 export const getThemeByUser: RequestHandler = async (
   request: Request,

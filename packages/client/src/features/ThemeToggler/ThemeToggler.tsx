@@ -1,10 +1,10 @@
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
-import { IconButton } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import { createContext, FC, useContext } from "react";
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { IconButton } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { createContext, FC, useContext } from 'react';
 
-import { ThemeNames } from "@/shared/constants";
+import { ThemeNames } from '@/shared/constants';
 
 export const ColorModeContext = createContext({
   // eslint-disable-next-line

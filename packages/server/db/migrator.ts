@@ -1,10 +1,10 @@
-import { SequelizeStorage, Umzug } from "umzug";
+import { SequelizeStorage, Umzug } from 'umzug';
 
-import { sequelize } from "./db";
+import { sequelize } from './db';
 
 export const migrator = new Umzug({
   migrations: {
-    glob: ["migrations/*.ts", { cwd: __dirname }],
+    glob: ['migrations/*.ts', { cwd: __dirname }],
   },
   context: sequelize,
   storage: new SequelizeStorage({

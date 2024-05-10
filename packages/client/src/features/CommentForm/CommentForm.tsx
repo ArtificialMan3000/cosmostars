@@ -1,20 +1,20 @@
-import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
-import { Box, Button, IconButton, TextField } from "@mui/material";
-import { IEmojiData, IEmojiPickerProps } from "emoji-picker-react";
-import { useFormik } from "formik";
-import { FC, useState } from "react";
-import { useParams } from "react-router-dom";
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import { Box, Button, IconButton, TextField } from '@mui/material';
+import { IEmojiData, IEmojiPickerProps } from 'emoji-picker-react';
+import { useFormik } from 'formik';
+import { FC, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
-import { useAddCommentMutation } from "@/entities/forum/comments/api";
-import { useGetUserQuery } from "@/entities/user/model/api";
-import { commentValidation } from "@/shared/constants/validationShemas";
-import { clean } from "@/shared/utils/clean";
+import { useAddCommentMutation } from '@/entities/forum/comments/api';
+import { useGetUserQuery } from '@/entities/user/model/api';
+import { commentValidation } from '@/shared/constants/validationShemas';
+import { clean } from '@/shared/utils/clean';
 
-import { CommentFormType } from "./types";
+import { CommentFormType } from './types';
 
 let EmojiPicker: React.FC<IEmojiPickerProps> | undefined;
-if (typeof window !== "undefined") {
-  import("emoji-picker-react").then((_module) => {
+if (typeof window !== 'undefined') {
+  import('emoji-picker-react').then((_module) => {
     EmojiPicker = _module.default;
   });
 }
@@ -28,7 +28,7 @@ export const CommentForm: FC<CommentFormType> = ({ parentId }) => {
 
   const formik = useFormik({
     initialValues: {
-      comment: "",
+      comment: '',
     },
     validationSchema: commentValidation,
     onSubmit: ({ comment }, helpers) => {
@@ -39,7 +39,7 @@ export const CommentForm: FC<CommentFormType> = ({ parentId }) => {
           authorId: userData.id,
           parentId,
         });
-        helpers.setFieldValue("comment", "", false);
+        helpers.setFieldValue('comment', '', false);
       }
       setShowPicker(false);
     },
@@ -65,10 +65,10 @@ export const CommentForm: FC<CommentFormType> = ({ parentId }) => {
       component="form"
       onSubmit={formik.handleSubmit}
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "end",
-        width: "95%",
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'end',
+        width: '95%',
         my: 2,
       }}
     >
@@ -89,7 +89,7 @@ export const CommentForm: FC<CommentFormType> = ({ parentId }) => {
       />
       <Box>
         <IconButton onClick={handlePicker}>
-          <EmojiEmotionsIcon sx={{ position: "relative" }} />
+          <EmojiEmotionsIcon sx={{ position: 'relative' }} />
         </IconButton>
         {showPicker && EmojiPicker && (
           <EmojiPicker onEmojiClick={onEmojiClick} />

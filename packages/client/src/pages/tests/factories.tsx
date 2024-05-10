@@ -1,9 +1,9 @@
-import { render } from "@testing-library/react";
-import { FetchMock } from "jest-fetch-mock/types";
-import { ReactElement } from "react";
-import { Provider } from "react-redux";
+import { render } from '@testing-library/react';
+import { FetchMock } from 'jest-fetch-mock/types';
+import { ReactElement } from 'react';
+import { Provider } from 'react-redux';
 
-import { store } from "@/app/store";
+import { store } from '@/app/store';
 
 const reset = () => {
   (fetch as FetchMock).resetMocks();

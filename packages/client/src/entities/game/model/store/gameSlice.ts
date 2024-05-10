@@ -1,8 +1,8 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { EnemyPoints, GameStatuses, PlayerLives } from "@/shared/constants";
+import { EnemyPoints, GameStatuses, PlayerLives } from '@/shared/constants';
 
-import { GameState } from "./types";
+import { GameState } from './types';
 
 const initialState: GameState = {
   status: GameStatuses.NOT_ACTIVE,
@@ -13,7 +13,7 @@ const initialState: GameState = {
 };
 
 export const gameSlice = createSlice({
-  name: "game",
+  name: 'game',
   initialState,
   reducers: {
     setGameStatus: (state, { payload }: PayloadAction<GameStatuses>) => {

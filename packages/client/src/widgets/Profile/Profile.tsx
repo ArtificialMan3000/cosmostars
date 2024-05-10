@@ -1,12 +1,12 @@
-import HttpsRoundedIcon from "@mui/icons-material/HttpsRounded";
-import InsertPhotoRoundedIcon from "@mui/icons-material/InsertPhotoRounded";
-import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
-import { Box, Paper, Tab, Tabs } from "@mui/material";
-import { PropsWithChildren, useState } from "react";
+import HttpsRoundedIcon from '@mui/icons-material/HttpsRounded';
+import InsertPhotoRoundedIcon from '@mui/icons-material/InsertPhotoRounded';
+import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
+import { Box, Paper, Tab, Tabs } from '@mui/material';
+import { PropsWithChildren, useState } from 'react';
 
-import { ChangeAvatarForm } from "@/features/Profile/change-avatar";
-import { ChangePasswordForm } from "@/features/Profile/change-password";
-import { ChangeProfileForm } from "@/features/Profile/change-profile";
+import { ChangeAvatarForm } from '@/features/Profile/change-avatar';
+import { ChangePasswordForm } from '@/features/Profile/change-password';
+import { ChangeProfileForm } from '@/features/Profile/change-profile';
 
 export type ProfileProps = PropsWithChildren<{
   handleProfile: () => void;
@@ -20,12 +20,12 @@ export function ProfileWidget() {
   };
 
   return (
-    <Paper className="form-paper" sx={{ my: "3%" }}>
+    <Paper className="form-paper" sx={{ my: '3%' }}>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         <Tabs

@@ -2,11 +2,11 @@ import {
   TableBody as MuiTableBody,
   TableCell,
   TableRow as MuiTableRow,
-} from "@mui/material";
-import { FC } from "react";
+} from '@mui/material';
+import { FC } from 'react';
 
-import { TableRow } from "./TableRow";
-import { RowData } from "./types";
+import { TableRow } from './TableRow';
+import { RowData } from './types';
 
 type TableBodyProps = {
   data: RowData[];

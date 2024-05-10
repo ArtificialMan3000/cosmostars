@@ -1,13 +1,13 @@
-import { HTTPMethods, Tags } from "@/shared/api/types";
-import { getErrorReason } from "@/shared/api/utils";
-import { yandexApi } from "@/shared/api/yandexApi";
+import { HTTPMethods, Tags } from '@/shared/api/types';
+import { getErrorReason } from '@/shared/api/utils';
+import { yandexApi } from '@/shared/api/yandexApi';
 import {
   AUTH_API_BASIC,
   USER_API_BASIC,
   UserEndpoints,
-} from "@/shared/config/index";
+} from '@/shared/config/index';
 
-import { UserInfo, UserPassword, UserProfile } from "./types";
+import { UserInfo, UserPassword, UserProfile } from './types';
 
 const userApi = yandexApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -34,7 +34,7 @@ const userApi = yandexApi.injectEndpoints({
         url: `/${USER_API_BASIC}/${UserEndpoints.PASSWORD}`,
         method: HTTPMethods.PUT,
         body,
-        responseHandler: "content-type",
+        responseHandler: 'content-type',
       }),
       transformErrorResponse: (response) => getErrorReason(response),
     }),

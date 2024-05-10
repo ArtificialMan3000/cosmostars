@@ -1,8 +1,8 @@
-import { DataTypes } from "sequelize";
-import { Column, Model, Table } from "sequelize-typescript";
+import { DataTypes } from 'sequelize';
+import { Column, Model, Table } from 'sequelize-typescript';
 
 @Table({
-  tableName: "themes",
+  tableName: 'themes',
   timestamps: false,
 })
 export class Theme extends Model {

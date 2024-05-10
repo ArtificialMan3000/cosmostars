@@ -1,15 +1,15 @@
-import { TableCell, TableRow as MuiTableRow, Typography } from "@mui/material";
-import { FC } from "react";
+import { TableCell, TableRow as MuiTableRow, Typography } from '@mui/material';
+import { FC } from 'react';
 
-import { PlayerInfo } from "./PlayerInfo";
-import { RowData } from "./types";
+import { PlayerInfo } from './PlayerInfo';
+import { RowData } from './types';
 
 type TableRowProps = {
   data: RowData;
 };
 
 export const TableRow: FC<TableRowProps> = ({
-  data: { place, name = "Name", email = "email@email.ru", img, score },
+  data: { place, name = 'Name', email = 'email@email.ru', img, score },
 }) => {
   return (
     <MuiTableRow>

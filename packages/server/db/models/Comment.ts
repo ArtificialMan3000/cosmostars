@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize';
 import {
   AfterCreate,
   BelongsTo,
@@ -8,14 +8,14 @@ import {
   HasMany,
   Model,
   Table,
-} from "sequelize-typescript";
+} from 'sequelize-typescript';
 
-import { Like } from "./Like";
-import { Topic } from "./Topic";
-import { User } from "./User";
+import { Like } from './Like';
+import { Topic } from './Topic';
+import { User } from './User';
 
 @Table({
-  tableName: "comments",
+  tableName: 'comments',
   updatedAt: false,
 })
 export class Comment extends Model {
@@ -63,6 +63,6 @@ export class Comment extends Model {
   @AfterCreate
   static async addIncrementCommentsCount(instance: Comment) {
     const topic: Topic | null = await Topic.findByPk(instance.topic_id);
-    await topic?.increment("comments_count");
+    await topic?.increment('comments_count');
   }
 }
