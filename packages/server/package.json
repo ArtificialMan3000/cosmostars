@@ -7,7 +7,7 @@
     "preview": "node ./dist/index.js",
     "dev": "cross-env NODE_ENV=development nodemon --files index.ts",
     "lint": "eslint .",
-    "format": "prettier --write .",
+    "format": "prettier . --write --ignore-path .gitignore",
     "test": "jest ."
   },
   "dependencies": {
