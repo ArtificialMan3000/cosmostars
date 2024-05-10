@@ -8,7 +8,7 @@ import { TopicItem } from "../TopicItem/TopicItem";
 import { commentConverter } from "./converter";
 import { CommentComponentType } from "./types";
 
-export const Comment: FC<CommentComponentType> = props => {
+export const Comment: FC<CommentComponentType> = (props) => {
   const [open, setOpen] = useState(true);
   const children = props.replies;
   const hasChildren = children.length > 0;

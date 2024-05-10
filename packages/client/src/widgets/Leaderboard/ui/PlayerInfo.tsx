@@ -14,7 +14,8 @@ export const PlayerInfo: FC<PlayerInfoProps> = ({ name, img, email }) => {
         avatar={
           <Avatar
             src={img ? configureResourcePath(img) : undefined}
-            alt={`${name} avatar`}>
+            alt={`${name} avatar`}
+          >
             {name[0]}
           </Avatar>
         }

@@ -35,7 +35,7 @@ export const store = configureStore({
   preloadedState:
     typeof window !== "undefined" ? window.__PRELOADED_STATE__ : undefined,
   reducer,
-  middleware: getDefaultMiddleware =>
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [PERSIST, REHYDRATE],

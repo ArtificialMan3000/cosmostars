@@ -8,8 +8,8 @@ import { NotificationTypes } from "./types";
 
 export const notificationMiddleware: Middleware<unknown, RootState> =
   ({ dispatch }) =>
-  next =>
-  action => {
+  (next) =>
+  (action) => {
     if (actions.includes(action.type)) {
       let text: string;
       if (typeof action.payload !== "string") {

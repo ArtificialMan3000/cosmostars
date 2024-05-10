@@ -50,7 +50,8 @@ export const ForumTopicPage: FC = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-          }}>
+          }}
+        >
           <Typography variant="h4" textAlign="center">
             Loading...
           </Typography>
@@ -68,25 +69,29 @@ export const ForumTopicPage: FC = () => {
             my: "3%",
             mx: "auto",
             padding: 3,
-          }}>
+          }}
+        >
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
               width: "100%",
-            }}>
+            }}
+          >
             <IconButton
               sx={{
                 position: "absolute",
               }}
-              onClick={handleNavigateForum}>
+              onClick={handleNavigateForum}
+            >
               <ReplyIcon />
             </IconButton>
             <Typography
               variant="h2"
               component="h1"
               className="topic-page__name"
-              m={"auto"}>
+              m={"auto"}
+            >
               {currentTopic?.title}
             </Typography>
           </Box>

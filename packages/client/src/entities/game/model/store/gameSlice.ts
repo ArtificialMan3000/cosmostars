@@ -20,7 +20,7 @@ export const gameSlice = createSlice({
       state.status = payload;
       state.isModalOpened = payload > GameStatuses.ACTIVE;
     },
-    toggleIsMutedSound: state => {
+    toggleIsMutedSound: (state) => {
       state.isMutedSound = !state.isMutedSound;
     },
     incrementScoreByEnemy: (
@@ -35,10 +35,10 @@ export const gameSlice = createSlice({
     incrementLives: (state, { payload }: PayloadAction<PlayerLives>) => {
       state.lives += payload;
     },
-    resetLives: state => {
+    resetLives: (state) => {
       state.lives = PlayerLives.MAX;
     },
-    resetGameState: state => {
+    resetGameState: (state) => {
       state.score = 0;
       state.lives = PlayerLives.MAX;
     },

@@ -15,7 +15,7 @@ import {
 } from "./types";
 
 const leaderboardApi = yandexApi.injectEndpoints({
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     getLeaderboard: builder.query<LeaderData[], GetTeamLeaderboardQuery>({
       query: ({ offset, limit }) => ({
         url: `/${LEADERBOARD_API_ENDPOINT}/${TEAM_NAME}`,
@@ -27,7 +27,7 @@ const leaderboardApi = yandexApi.injectEndpoints({
         },
       }),
       transformResponse(response: LeaderboardResponse) {
-        return response.map(item => item.data);
+        return response.map((item) => item.data);
       },
       transformErrorResponse(response) {
         return getErrorReason(response);
@@ -39,7 +39,7 @@ const leaderboardApi = yandexApi.injectEndpoints({
       undefined,
       AddLeaderboardEntryMutation
     >({
-      query: leaderData => ({
+      query: (leaderData) => ({
         url: `/${LEADERBOARD_API_ENDPOINT}`,
         method: HTTPMethods.POST,
         body: {

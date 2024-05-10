@@ -6,7 +6,7 @@ import { THEME_ENDPOINT } from "@/shared/constants/api";
 import { ThemeCreationData, ThemeData } from "./types";
 
 const themeApi = internalApi.injectEndpoints({
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     getUserTheme: builder.query<ThemeData, number>({
       query: (id: number) => ({
         url: `/${THEME_ENDPOINT}/${id}`,

@@ -3,7 +3,7 @@ import { FC } from "react";
 
 import { TypographyButtonType } from "./types";
 
-export const TypographyButton: FC<TypographyButtonType> = props => {
+export const TypographyButton: FC<TypographyButtonType> = (props) => {
   const { icon, title, onClick } = props;
 
   const handleClick = () => {
@@ -15,12 +15,14 @@ export const TypographyButton: FC<TypographyButtonType> = props => {
       sx={{
         display: "flex",
         alignItems: "center",
-      }}>
+      }}
+    >
       <IconButton
         edge="end"
         aria-label="likes"
         disableRipple
-        onClick={handleClick}>
+        onClick={handleClick}
+      >
         {icon}
       </IconButton>
       <Typography ml={1} color="GrayText">

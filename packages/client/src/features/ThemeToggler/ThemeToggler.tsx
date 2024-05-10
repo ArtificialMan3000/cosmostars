@@ -22,7 +22,8 @@ export const ThemeToggler: FC = () => {
       sx={{
         mx: 2,
       }}
-      onClick={colorMode.toggleColorMode}>
+      onClick={colorMode.toggleColorMode}
+    >
       {theme.palette.mode === ThemeNames.DARK ? (
         <Brightness7Icon fontSize="small" />
       ) : (

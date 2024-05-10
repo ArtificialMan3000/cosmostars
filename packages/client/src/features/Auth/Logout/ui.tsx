@@ -11,7 +11,8 @@ export const Logout = () => {
       sx={{
         mx: 2,
       }}
-      onClick={logoutAuth}>
+      onClick={logoutAuth}
+    >
       <LogoutIcon />
     </IconButton>
   );

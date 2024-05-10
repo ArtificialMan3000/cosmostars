@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 import { LinkComponentType } from "./types";
 
-export const MenuLink: FC<LinkComponentType> = props => {
+export const MenuLink: FC<LinkComponentType> = (props) => {
   const { title, icon, path = "" } = props.link;
 
   return (
@@ -15,7 +15,8 @@ export const MenuLink: FC<LinkComponentType> = props => {
           alignItems: "center",
           justifyContent: "center",
           cursor: "pointer",
-        }}>
+        }}
+      >
         <ListItemText
           sx={{
             maxWidth: "max-content",

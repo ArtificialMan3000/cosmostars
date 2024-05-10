@@ -18,7 +18,8 @@ export const GenericList = <T, U extends Record<string, unknown>>({
         width: `${listWidth}%`,
         ml: "auto",
         overflowY: "auto",
-      }}>
+      }}
+    >
       {items.map((item, index) => {
         return (
           <Box key={`comment-${index}`}>

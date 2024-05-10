@@ -159,7 +159,7 @@ export class GameController {
   }
 
   private watchStarsGone() {
-    this.stars.forEach(star => {
+    this.stars.forEach((star) => {
       if (star.position.y - star.radius >= this.scene.height) {
         star.position.x = Math.random() * this.scene.width;
         star.position.y = -star.radius;
@@ -232,7 +232,7 @@ export class GameController {
     disableExplosion?: boolean
   ) {
     let isAlive = true;
-    const newProjectiles = projectiles.filter(projectile => {
+    const newProjectiles = projectiles.filter((projectile) => {
       if (this.isIntersect(collidingObject, projectile)) {
         if (!disableExplosion) {
           this.explosions.push(this.createExplosion(collidingObject.position));
@@ -254,7 +254,7 @@ export class GameController {
     });
 
     this.bonusController.bonuses = this.bonusController.bonuses.filter(
-      bonus => {
+      (bonus) => {
         if (this.isIntersect(bonus, this.player)) {
           this.bonusController.getBonusResult(bonus);
           this.sound.playBonus();
@@ -264,13 +264,13 @@ export class GameController {
       }
     );
 
-    this.enemyGrids.forEach(enemyGrid => {
+    this.enemyGrids.forEach((enemyGrid) => {
       if (this.isIntersect(this.player, enemyGrid)) {
         store.dispatch(decrementLives(PlayerLives.MAX));
         this.end();
       }
 
-      enemyGrid.enemies = enemyGrid.enemies.filter(enemy => {
+      enemyGrid.enemies = enemyGrid.enemies.filter((enemy) => {
         const hitEnemy = this.checkCollision(
           this.player.projectiles,
           enemy,
@@ -308,7 +308,7 @@ export class GameController {
         enemy.projectiles = hitPlayer.newProjectiles;
 
         this.player.projectiles = this.player.projectiles.filter(
-          playerProjectile => {
+          (playerProjectile) => {
             const hitProjectiles = this.checkCollision(
               enemy.projectiles,
               playerProjectile,
@@ -343,7 +343,7 @@ export class GameController {
   public clearGameState() {
     this.player.clear();
     this.bonusController.clear();
-    this.enemyGrids.forEach(grid => grid.clear());
+    this.enemyGrids.forEach((grid) => grid.clear());
     this.enemyGrids = [];
     this.explosions = [];
     this.asteroids = [];

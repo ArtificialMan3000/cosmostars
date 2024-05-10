@@ -10,7 +10,7 @@ import {
 } from "./types";
 
 const topicsApi = internalApi.injectEndpoints({
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     addTopic: builder.mutation<undefined, AddTopicMutation>({
       query: ({ title, description, authorId }) => ({
         url: `/${TOPICS_API_ENDPOINT}/`,
@@ -26,14 +26,14 @@ const topicsApi = internalApi.injectEndpoints({
       query: () => ({
         url: `/${TOPICS_API_ENDPOINT}/`,
       }),
-      transformErrorResponse: response => getErrorReason(response),
+      transformErrorResponse: (response) => getErrorReason(response),
       providesTags: [InternalTags.TOPICS],
     }),
     getOneTopic: builder.query<TopicItemDataRequest, number>({
-      query: id => ({
+      query: (id) => ({
         url: `/${TOPICS_API_ENDPOINT}/${id}/`,
       }),
-      transformErrorResponse: response => getErrorReason(response),
+      transformErrorResponse: (response) => getErrorReason(response),
       providesTags: [InternalTags.COMMENTS],
     }),
   }),

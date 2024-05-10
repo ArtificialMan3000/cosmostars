@@ -18,7 +18,7 @@ export const LivesContainer: FC = () => {
   const lives = useAppSelector(playerLivesSelector);
 
   const healthArray = useMemo(() => {
-    return [...Array(PlayerLives.MAX).keys()].map(item => (
+    return [...Array(PlayerLives.MAX).keys()].map((item) => (
       <ListItem key={item} sx={{ px: 1 }}>
         <ListItemIcon sx={{ minWidth: "auto" }}>
           {item + 1 <= lives ? (
@@ -43,7 +43,8 @@ export const LivesContainer: FC = () => {
         sx={{
           display: "flex",
           p: "0 4px",
-        }}>
+        }}
+      >
         {healthArray}
       </List>
     </GameBlock>

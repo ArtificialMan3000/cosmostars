@@ -27,7 +27,7 @@ export const ChangeProfileForm = () => {
     enableReinitialize: true,
     initialValues: initValues,
     validationSchema: ChangeProfileSchema,
-    onSubmit: values => {
+    onSubmit: (values) => {
       const form = cleanForm(values);
       changeProfile(form);
     },

@@ -29,7 +29,8 @@ export const Leaderboard: FC = () => {
       sx={{
         width: "100%",
         p: "5%",
-      }}>
+      }}
+    >
       <Typography variant="h3" component="h1">
         Leaderboard
       </Typography>

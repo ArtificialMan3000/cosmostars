@@ -4,27 +4,27 @@ import { getErrorReason } from "@/shared/api/utils";
 import { LIKES_API_ENDPOINT } from "@/shared/constants/forum";
 
 const likesApi = internalApi.injectEndpoints({
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     addLike: builder.mutation<undefined, number>({
-      query: id => ({
+      query: (id) => ({
         url: `/${LIKES_API_ENDPOINT}/`,
         method: HTTPMethods.POST,
         body: {
           comment_id: id,
         },
       }),
-      transformErrorResponse: response => getErrorReason(response),
+      transformErrorResponse: (response) => getErrorReason(response),
       invalidatesTags: [InternalTags.COMMENTS],
     }),
     deleteLike: builder.mutation<undefined, number>({
-      query: id => ({
+      query: (id) => ({
         url: `/${LIKES_API_ENDPOINT}/`,
         method: HTTPMethods.DELETE,
         body: {
           comment_id: id,
         },
       }),
-      transformErrorResponse: response => getErrorReason(response),
+      transformErrorResponse: (response) => getErrorReason(response),
       invalidatesTags: [InternalTags.COMMENTS],
     }),
   }),

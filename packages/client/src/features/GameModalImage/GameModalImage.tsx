@@ -5,7 +5,7 @@ import { GameModalImageProps } from "@/shared/constants";
 
 import { GameModalImageTypes } from "./types";
 
-export const GameModalImage: FC<GameModalImageTypes> = props => {
+export const GameModalImage: FC<GameModalImageTypes> = (props) => {
   const { type, image } = props;
   const imageConfig = GameModalImageProps[type];
 

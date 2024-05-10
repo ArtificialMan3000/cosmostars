@@ -8,7 +8,7 @@ import { Notification } from "@/widgets/Notification";
 
 import { ThemeNames } from "../constants";
 
-export const BasicLayout: FC<PropsWithChildren> = props => {
+export const BasicLayout: FC<PropsWithChildren> = (props) => {
   const theme = useTheme();
   const mode = theme.palette.mode;
 
@@ -25,7 +25,8 @@ export const BasicLayout: FC<PropsWithChildren> = props => {
         width: "100%",
         background: `url(${background}) repeat`,
         backgroundSize: "contain",
-      }}>
+      }}
+    >
       <AdditionalMenu />
       {props.children}
       <Notification />

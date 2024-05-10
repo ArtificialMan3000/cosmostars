@@ -4,7 +4,7 @@ import { MainMenu } from "@/widgets/MainMenu/MainMenu";
 
 import { BasicLayout } from "./BasicLayout";
 
-export const MainLayout: FC<PropsWithChildren> = props => {
+export const MainLayout: FC<PropsWithChildren> = (props) => {
   return (
     <BasicLayout>
       <MainMenu />

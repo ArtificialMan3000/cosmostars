@@ -16,9 +16,9 @@ const AUTH_URL = {
 };
 
 export const authApi = yandexApi.injectEndpoints({
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     signUp: builder.mutation<SignUpResponse, SignUpRequest>({
-      query: signUpRequest => ({
+      query: (signUpRequest) => ({
         url: AUTH_URL.SIGN_UP,
         method: Method.POST,
         body: signUpRequest,
@@ -29,7 +29,7 @@ export const authApi = yandexApi.injectEndpoints({
       },
     }),
     signIn: builder.mutation<SignInResponse, SignInRequest>({
-      query: signInRequest => ({
+      query: (signInRequest) => ({
         url: AUTH_URL.SIGN_IN,
         method: Method.POST,
         body: signInRequest,

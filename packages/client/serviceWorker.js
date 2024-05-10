@@ -304,7 +304,7 @@ const AcceptedTypes = {
   JS: "application/javascript",
 };
 
-const addResourcesToCache = async resources => {
+const addResourcesToCache = async (resources) => {
   try {
     const cache = await caches.open(CACHE_NAME);
     await cache.addAll(resources);
@@ -333,13 +333,13 @@ const removeFromCache = async () => {
   const keyList = await caches.keys();
   const cacheKeeplist = [CACHE_NAME];
   const filteredKeyList = keyList
-    .filter(key => cacheKeeplist.indexOf(key) === -1)
-    .map(cache => caches.delete(cache));
+    .filter((key) => cacheKeeplist.indexOf(key) === -1)
+    .map((cache) => caches.delete(cache));
 
   return Promise.all(filteredKeyList);
 };
 
-const getFromNetwork = request =>
+const getFromNetwork = (request) =>
   new Promise((fulfill, reject) => {
     const timeoutId = setTimeout(
       () => reject(new Error("Connection error!")),
@@ -359,7 +359,7 @@ const getFromNetwork = request =>
     fetchData();
   });
 
-const getFromCache = async request => {
+const getFromCache = async (request) => {
   try {
     const cache = await caches.open(CACHE_NAME);
     const matching = await cache.match(request);
@@ -370,7 +370,7 @@ const getFromCache = async request => {
   }
 };
 
-const fromNetworkFirst = async request => {
+const fromNetworkFirst = async (request) => {
   try {
     const responseFromNetwork = await getFromNetwork(request);
     await putInCache(request, responseFromNetwork.clone());
@@ -383,7 +383,7 @@ const fromNetworkFirst = async request => {
   }
 };
 
-const fromCacheFirst = async request => {
+const fromCacheFirst = async (request) => {
   const cache = await getFromCache(request);
   if (cache) {
     return cache;
@@ -392,18 +392,18 @@ const fromCacheFirst = async request => {
   return responseFromNetwork;
 };
 
-self.addEventListener("install", event => {
+self.addEventListener("install", (event) => {
   console.log("Service Worker installing...");
   event.waitUntil(addResourcesToCache(STATIC));
 });
 
-self.addEventListener("activate", event => {
+self.addEventListener("activate", (event) => {
   console.log("Service Worker activating...");
   self.clients.claim();
   event.waitUntil(removeFromCache());
 });
 
-self.addEventListener("fetch", event => {
+self.addEventListener("fetch", (event) => {
   const { request } = event;
   const acceptHeader = request.headers.get("Accept");
 

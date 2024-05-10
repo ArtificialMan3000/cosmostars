@@ -32,17 +32,17 @@ class BufferLoader {
     request.onload = () => {
       this.context.decodeAudioData(
         request.response,
-        buffer => {
+        (buffer) => {
           if (!buffer) {
             console.error(`error decoding file ${url}`);
             return;
           }
           this.bufferList[index] = buffer;
-          if (Object.values(this.bufferList).every(x => x !== null)) {
+          if (Object.values(this.bufferList).every((x) => x !== null)) {
             this.onload(this.bufferList);
           }
         },
-        error => {
+        (error) => {
           console.error(`decodeAudioData error, ${error}`);
         }
       );

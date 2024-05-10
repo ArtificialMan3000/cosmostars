@@ -42,7 +42,7 @@ export const Forum: FC = () => {
       search: "",
     },
     validationSchema: searchValidation,
-    onSubmit: values => {
+    onSubmit: (values) => {
       console.log(values);
     },
   });
@@ -67,7 +67,8 @@ export const Forum: FC = () => {
         flexDirection: "column",
         alignItems: "center",
         padding: 3,
-      }}>
+      }}
+    >
       <Typography variant="h2" component="h1" textAlign="center">
         Forum
       </Typography>
@@ -79,7 +80,8 @@ export const Forum: FC = () => {
           width: "100%",
           justifyContent: "space-between",
           px: 4,
-        }}>
+        }}
+      >
         <Box
           component="form"
           onSubmit={formikSearch.handleSubmit}
@@ -90,7 +92,8 @@ export const Forum: FC = () => {
             flex: 1,
             my: 2,
             mr: 5,
-          }}>
+          }}
+        >
           <TextField
             fullWidth
             id="search"
@@ -114,7 +117,8 @@ export const Forum: FC = () => {
                   <IconButton
                     aria-label="search topic"
                     edge="end"
-                    type="submit">
+                    type="submit"
+                  >
                     <ArrowForward />
                   </IconButton>
                 </InputAdornment>
@@ -129,7 +133,8 @@ export const Forum: FC = () => {
           flex: 1,
           width: "100%",
           overflowY: "auto",
-        }}>
+        }}
+      >
         {filtredTopics.length ? (
           <GenericList
             renderItem={TopicItem}
@@ -148,7 +153,8 @@ export const Forum: FC = () => {
           display: "flex",
           justifyContent: "flex-end",
           width: "100%",
-        }}>
+        }}
+      >
         <TablePagination
           component="div"
           rowsPerPageOptions={BasePerPage}

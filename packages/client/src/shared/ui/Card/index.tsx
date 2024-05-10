@@ -58,7 +58,7 @@ const CardView = ({
   children,
 }: Props) => {
   const [showPassword, setShowPassword] = useState(false);
-  const handleClickShowPassword = () => setShowPassword(show => !show);
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
@@ -70,7 +70,8 @@ const CardView = ({
       className="form-paper"
       component="form"
       onSubmit={handleSubmit}
-      noValidate>
+      noValidate
+    >
       <Card
         sx={{
           my: "2rem",
@@ -82,18 +83,21 @@ const CardView = ({
           alignItems: "center",
           boxShadow: "none",
           border: "none",
-        }}>
+        }}
+      >
         {icon && (
           <Box
             className="back-icon"
             sx={{
               pl: "14px",
               width: "100%",
-            }}>
+            }}
+          >
             <IconButton
               onClick={() => {
                 navigate(RoutesName.LOGIN);
-              }}>
+              }}
+            >
               {icon}
             </IconButton>
           </Box>
@@ -109,9 +113,10 @@ const CardView = ({
         <Box
           sx={{
             width: "492px",
-          }}>
+          }}
+        >
           <CardContent>
-            {fields.map(field => {
+            {fields.map((field) => {
               return (
                 <TextField
                   margin="normal"
@@ -133,12 +138,14 @@ const CardView = ({
                         <IconButton
                           aria-label="toggle password visibility"
                           onClick={handleClickShowPassword}
-                          onMouseDown={handleMouseDownPassword}>
+                          onMouseDown={handleMouseDownPassword}
+                        >
                           {showPassword ? <VisibilityOff /> : <Visibility />}
                         </IconButton>
                       </InputAdornment>
                     ),
-                  }}></TextField>
+                  }}
+                ></TextField>
               );
             })}
           </CardContent>
@@ -147,12 +154,14 @@ const CardView = ({
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-            }}>
+            }}
+          >
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}>
+              sx={{ mt: 3, mb: 2 }}
+            >
               {buttonName}
             </Button>
             {children && (
@@ -163,7 +172,8 @@ const CardView = ({
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
-                }}>
+                }}
+              >
                 {children}
               </Box>
             )}

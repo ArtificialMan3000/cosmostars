@@ -20,7 +20,8 @@ export const GameBlock: FC<GameBlockType> = ({ children, position }) => {
         color: BaseGameColors.WHITE,
         border: `${gameBorderWidth}px solid ${BaseGameColors.WHITE}`,
         borderRadius: ThemeBorderRadius.BUTTON,
-      }}>
+      }}
+    >
       {children}
     </Box>
   );

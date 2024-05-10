@@ -14,7 +14,7 @@ import { CommentFormType } from "./types";
 
 let EmojiPicker: React.FC<IEmojiPickerProps> | undefined;
 if (typeof window !== "undefined") {
-  import("emoji-picker-react").then(_module => {
+  import("emoji-picker-react").then((_module) => {
     EmojiPicker = _module.default;
   });
 }
@@ -58,7 +58,7 @@ export const CommentForm: FC<CommentFormType> = ({ parentId }) => {
     formik.values.comment = formik.values.comment + emojiObject!.emoji;
   };
 
-  const handlePicker = () => setShowPicker(val => !val);
+  const handlePicker = () => setShowPicker((val) => !val);
 
   return (
     <Box
@@ -70,7 +70,8 @@ export const CommentForm: FC<CommentFormType> = ({ parentId }) => {
         alignItems: "end",
         width: "95%",
         my: 2,
-      }}>
+      }}
+    >
       <TextField
         fullWidth
         id="comment"

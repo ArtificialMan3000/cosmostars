@@ -21,6 +21,6 @@ export const sequelize = new Sequelize(
     port: Number(POSTGRES_PORT ?? 5432),
     dialect: "postgres",
     models: [__dirname + "/models"],
-    logging: sql => logger.info(sql),
+    logging: (sql) => logger.info(sql),
   }
 );

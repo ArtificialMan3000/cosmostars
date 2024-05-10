@@ -3,10 +3,10 @@ export function initServiceWorker() {
     window.addEventListener("load", () => {
       navigator.serviceWorker
         .register("/serviceWorker.js")
-        .then(registration => {
+        .then((registration) => {
           console.log(`Service Worker registered in ${registration.scope}`);
         })
-        .catch(error =>
+        .catch((error) =>
           console.log(`Service Worker registretion failed. ${error}`)
         );
     });

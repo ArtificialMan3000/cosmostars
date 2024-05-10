@@ -27,7 +27,7 @@ import { CommentForm } from "../CommentForm/CommentForm";
 import { TypographyButton } from "../TypographyButton/TypographyButton";
 import { TopicItemType } from "./types";
 
-export const TopicItem: FC<TopicItemType> = props => {
+export const TopicItem: FC<TopicItemType> = (props) => {
   const {
     id,
     // TODO: убрать мок, когда прикрутим передачу юзера
@@ -71,7 +71,8 @@ export const TopicItem: FC<TopicItemType> = props => {
           color="error"
           startIcon={<CloseIcon />}
           sx={{ ml: 1 }}
-          onClick={handleChangeFormVisible}>
+          onClick={handleChangeFormVisible}
+        >
           Close
         </Button>
       );
@@ -81,7 +82,8 @@ export const TopicItem: FC<TopicItemType> = props => {
       <Button
         startIcon={<ReplyIcon />}
         sx={{ ml: 1 }}
-        onClick={handleChangeFormVisible}>
+        onClick={handleChangeFormVisible}
+      >
         Answer
       </Button>
     );
@@ -108,7 +110,8 @@ export const TopicItem: FC<TopicItemType> = props => {
           <Avatar
             sx={{ width: 48, height: 48 }}
             src={avatar ?? undefined}
-            alt={`${login} avatar`}>
+            alt={`${login} avatar`}
+          >
             {login[0]}
           </Avatar>
         }
@@ -132,7 +135,8 @@ export const TopicItem: FC<TopicItemType> = props => {
         boxShadow: "none",
       }}
       key={id}
-      variant={isBordered ? "outlined" : "elevation"}>
+      variant={isBordered ? "outlined" : "elevation"}
+    >
       {generateTitle}
       <CardContent>{description}</CardContent>
       <CardActions>

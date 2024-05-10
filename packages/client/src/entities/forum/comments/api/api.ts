@@ -9,7 +9,7 @@ import {
 import { AddCommentMutation, CommentDataRequest } from "./types";
 
 const commentsApi = internalApi.injectEndpoints({
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     addComment: builder.mutation<undefined, AddCommentMutation>({
       query: ({ comment, topicId, parentId, authorId }) => ({
         url: `/${COMMENTS_API_ENDPOINT}/`,
@@ -27,11 +27,11 @@ const commentsApi = internalApi.injectEndpoints({
       invalidatesTags: [InternalTags.COMMENTS],
     }),
     getComments: builder.query<CommentDataRequest[], number>({
-      query: id => ({
+      query: (id) => ({
         url: `/${TOPICS_API_ENDPOINT}/${id}/${COMMENTS_API_ENDPOINT}/`,
         method: HTTPMethods.GET,
       }),
-      transformErrorResponse: response => getErrorReason(response),
+      transformErrorResponse: (response) => getErrorReason(response),
       providesTags: [InternalTags.COMMENTS],
     }),
   }),

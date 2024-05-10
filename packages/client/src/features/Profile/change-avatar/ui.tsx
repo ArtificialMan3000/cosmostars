@@ -93,7 +93,8 @@ export const ChangeAvatarForm = () => {
       className="form-paper"
       component="form"
       onSubmit={handleSubmit}
-      noValidate>
+      noValidate
+    >
       <Card
         sx={{
           my: "2rem",
@@ -105,7 +106,8 @@ export const ChangeAvatarForm = () => {
           alignItems: "center",
           boxShadow: "none",
           border: "none",
-        }}>
+        }}
+      >
         <CardHeader
           titleTypographyProps={{ variant: "h3" }}
           title={props.title}
@@ -122,13 +124,15 @@ export const ChangeAvatarForm = () => {
             justifyContent: "space-around",
             width: "80%",
             height: "100%",
-          }}>
+          }}
+        >
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
               mb: "1rem",
-            }}>
+            }}
+          >
             <Avatar
               alt={data?.login}
               sx={{ width: 202, height: 188 }}
@@ -149,7 +153,8 @@ export const ChangeAvatarForm = () => {
                 errors.avatar ? "1px dashed #f44336" : "1px dashed #E0E0E0"
               }`,
               borderRadius: ThemeBorderRadius.MIN,
-            }}>
+            }}
+          >
             {drag ? (
               <Box
                 sx={{
@@ -163,7 +168,8 @@ export const ChangeAvatarForm = () => {
                 onDragStart={dragStartHandler}
                 onDragLeave={dragLeaveHandler}
                 onDragOver={dragStartHandler}
-                onDrop={onDropHandler}>
+                onDrop={onDropHandler}
+              >
                 <Typography>Drag image to download</Typography>
               </Box>
             ) : (
@@ -176,7 +182,8 @@ export const ChangeAvatarForm = () => {
                       justifyContent: "center",
                       alignItems: "center",
                       position: "relative",
-                    }}>
+                    }}
+                  >
                     <Box
                       sx={{
                         background: `no-repeat center/cover url(${selectedImage})`,
@@ -193,7 +200,8 @@ export const ChangeAvatarForm = () => {
                         right: 0,
                         top: 0,
                       }}
-                      color="secondary">
+                      color="secondary"
+                    >
                       <CloseIcon />
                     </IconButton>
                   </Box>
@@ -209,7 +217,8 @@ export const ChangeAvatarForm = () => {
                     }}
                     onDragStart={dragStartHandler}
                     onDragLeave={dragLeaveHandler}
-                    onDragOver={dragStartHandler}>
+                    onDragOver={dragStartHandler}
+                  >
                     <UploadFileIcon />
                     <Typography>
                       <Link component="label">
@@ -247,7 +256,8 @@ export const ChangeAvatarForm = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-            }}>
+            }}
+          >
             <Button type="submit" fullWidth variant="contained">
               {props.btn}
             </Button>

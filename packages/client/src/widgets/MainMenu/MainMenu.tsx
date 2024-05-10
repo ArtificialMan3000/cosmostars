@@ -19,14 +19,16 @@ export const MainMenu: FC = () => {
         mt: 2,
         display: "flex",
         justifyContent: "center",
-      }}>
+      }}
+    >
       <Paper sx={paperStyleBase}>
         <List
           sx={{
             width: "100%",
             display: "flex",
             justifyContent: "space-between",
-          }}>
+          }}
+        >
           {MenuItems.map((item, index) => (
             <MenuLink link={item} key={index} />
           ))}

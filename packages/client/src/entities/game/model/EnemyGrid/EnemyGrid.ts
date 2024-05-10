@@ -85,7 +85,7 @@ export class EnemyGrid extends BaseObject {
   }
 
   public update() {
-    this.enemies.forEach(item => {
+    this.enemies.forEach((item) => {
       item.update();
     });
     this.position.x += this.velocity.dx;
@@ -106,6 +106,6 @@ export class EnemyGrid extends BaseObject {
   }
 
   public clear() {
-    this.enemies.forEach(enemy => enemy.clear());
+    this.enemies.forEach((enemy) => enemy.clear());
   }
 }

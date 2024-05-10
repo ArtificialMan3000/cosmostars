@@ -66,7 +66,8 @@ export const SignIn = ({ handleSignIn }: SignInProps) => {
         fields={props.fields}
         buttonName={props.btn}
         linkName={props.link}
-        linkHref={RoutesName.REGISTRATION}>
+        linkHref={RoutesName.REGISTRATION}
+      >
         <YandexOAuth />
       </CardView>
     </Paper>

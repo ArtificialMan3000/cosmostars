@@ -26,11 +26,13 @@ export function ProfileWidget({ handleProfile }: ProfileProps) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-        }}>
+        }}
+      >
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="secondary tabs example">
+          aria-label="secondary tabs example"
+        >
           <Tab label="Profile" icon={<PersonRoundedIcon />} />
           <Tab label="Pasword" icon={<HttpsRoundedIcon />} />
           <Tab label="Avatar" icon={<InsertPhotoRoundedIcon />} />

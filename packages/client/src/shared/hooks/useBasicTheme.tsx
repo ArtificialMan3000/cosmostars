@@ -44,7 +44,7 @@ export const useBasicTheme = () => {
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode(prevMode =>
+        setMode((prevMode) =>
           prevMode === ThemeNames.LIGHT ? ThemeNames.DARK : ThemeNames.LIGHT
         );
         if (user && user.id) {

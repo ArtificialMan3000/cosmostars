@@ -3,7 +3,7 @@ import { DataTypes } from "sequelize";
 import type { Migration } from "../migrator";
 
 export const up: Migration = async ({ context: sequelize }) => {
-  await sequelize.transaction(t => {
+  await sequelize.transaction((t) => {
     return Promise.all([
       sequelize.getQueryInterface().addColumn(
         "topics",
@@ -20,7 +20,7 @@ export const up: Migration = async ({ context: sequelize }) => {
 };
 
 export const down: Migration = async ({ context: sequelize }) => {
-  await sequelize.transaction(t => {
+  await sequelize.transaction((t) => {
     return Promise.all([
       sequelize
         .getQueryInterface()

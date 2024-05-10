@@ -19,7 +19,8 @@ export const NotFoundPage: FC = () => {
           my: "auto",
           height: "70%",
           width: "100%",
-        }}>
+        }}
+      >
         <Typography component="h1" className="main-page__name">
           Oops...Error!
         </Typography>

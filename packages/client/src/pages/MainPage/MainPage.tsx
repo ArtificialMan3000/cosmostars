@@ -30,7 +30,8 @@ export const MainPage: FC = () => {
           my: "auto",
           height: "70%",
           width: "100%",
-        }}>
+        }}
+      >
         <Typography component="h1" className="main-page__name">
           Galaxy spaceship
         </Typography>
@@ -39,7 +40,8 @@ export const MainPage: FC = () => {
           variant="contained"
           endIcon={<PlayArrowIcon />}
           size="large"
-          onClick={handleNavigate}>
+          onClick={handleNavigate}
+        >
           Play
         </Button>
       </Box>

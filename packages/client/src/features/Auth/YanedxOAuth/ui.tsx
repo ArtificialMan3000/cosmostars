@@ -8,7 +8,8 @@ export const YandexOAuth = () => {
       sx={{
         mb: 2,
       }}
-      onClick={handleYandexOAuth}>
+      onClick={handleYandexOAuth}
+    >
       <Typography>Enter with Yandex</Typography>
     </Button>
   );

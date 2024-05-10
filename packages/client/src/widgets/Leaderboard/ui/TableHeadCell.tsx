@@ -15,7 +15,8 @@ export const TableHeadCell: FC<TableHeadCellProps> = ({ text }) => {
           fontSize: "10px",
           lineHeight: "15px",
           textTransform: "uppercase",
-        }}>
+        }}
+      >
         {text}
       </Typography>
     </TableCell>

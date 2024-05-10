@@ -20,7 +20,7 @@ export const checkAuthMiddleware: RequestHandler = async (req, res, next) => {
         Cookie: req.headers.cookie,
       },
     })
-    .then(async res => {
+    .then(async (res) => {
       const [user] = await User.findOrCreate({
         where: { ya_id: res.data.id },
         defaults: {

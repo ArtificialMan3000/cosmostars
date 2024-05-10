@@ -53,12 +53,14 @@ export const AddTopic: FC<AddTopicProps> = ({ onSubmit, authorId }) => {
             width: "400px",
             padding: "16px",
             backgroundColor: "background.default",
-          }}>
+          }}
+        >
           <Typography
             id="modal-title"
             variant="h6"
             component="h3"
-            align="center">
+            align="center"
+          >
             Add Topic
           </Typography>
 
@@ -70,7 +72,8 @@ export const AddTopic: FC<AddTopicProps> = ({ onSubmit, authorId }) => {
               width: "100%",
               my: 2,
               mr: 5,
-            }}>
+            }}
+          >
             <TextField
               fullWidth
               id="topicName"
@@ -112,7 +115,8 @@ export const AddTopic: FC<AddTopicProps> = ({ onSubmit, authorId }) => {
               sx={{
                 display: "flex",
                 justifyContent: "flex-end",
-              }}>
+              }}
+            >
               <Button type="reset">Cancel</Button>
               <Button type="submit">Add</Button>
             </Box>
@@ -123,7 +127,8 @@ export const AddTopic: FC<AddTopicProps> = ({ onSubmit, authorId }) => {
         variant="contained"
         size="large"
         type="button"
-        onClick={handleOpen}>
+        onClick={handleOpen}
+      >
         Add +
       </Button>
     </>

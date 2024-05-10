@@ -33,7 +33,7 @@ import { useAppDispatch, useAppSelector } from "@/shared/hooks/store";
 
 import { GameModalType } from "./types";
 
-export const GameModal: FC<GameModalType> = props => {
+export const GameModal: FC<GameModalType> = (props) => {
   const [addLeaderboardEntry] = useAddLeaderboardEntryMutation();
   const { data } = useGetUserQuery();
 
@@ -98,7 +98,8 @@ export const GameModal: FC<GameModalType> = props => {
           overflow: "inherit",
           backgroundColor: "background.default",
         },
-      }}>
+      }}
+    >
       {config && (
         <>
           <DialogTitle variant="h2" component="h1">
@@ -114,7 +115,8 @@ export const GameModal: FC<GameModalType> = props => {
             <Typography
               variant="h5"
               component="p"
-              color={BaseGameColors.PURPLE}>
+              color={BaseGameColors.PURPLE}
+            >
               Your score: {score}
             </Typography>
           )}
@@ -140,7 +142,8 @@ export const GameModal: FC<GameModalType> = props => {
             sx={{
               display: "flex",
               justifyContent: "space-around",
-            }}>
+            }}
+          >
             <Button variant="contained" onClick={handleHomeNavigate}>
               Home page
             </Button>

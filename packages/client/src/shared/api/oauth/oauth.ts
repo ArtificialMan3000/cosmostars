@@ -8,9 +8,9 @@ const OAUTH_URL = {
 };
 
 export const oauthApi = yandexApi.injectEndpoints({
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     signInYandexOAuth: builder.mutation({
-      query: signInYandexOAuthRequest => ({
+      query: (signInYandexOAuthRequest) => ({
         url: OAUTH,
         method: Method.POST,
         body: signInYandexOAuthRequest,
@@ -22,7 +22,7 @@ export const oauthApi = yandexApi.injectEndpoints({
       },
     }),
     getServiceID: builder.query({
-      query: redirect_uri => ({
+      query: (redirect_uri) => ({
         url: OAUTH_URL.SERVICE_ID,
         params: { redirect_uri: redirect_uri },
         responseHandler: "content-type",

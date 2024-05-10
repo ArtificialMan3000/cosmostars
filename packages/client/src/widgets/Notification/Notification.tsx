@@ -22,7 +22,8 @@ export const Notification: FC = () => {
               dispatch(clearNotification());
             }
           }}
-          autoHideDuration={6000}>
+          autoHideDuration={6000}
+        >
           <Alert severity={type ?? "info"} variant="filled">
             {text}
           </Alert>

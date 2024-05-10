@@ -10,42 +10,42 @@ import {
 import { UserInfo, UserPassword, UserProfile } from "./types";
 
 const userApi = yandexApi.injectEndpoints({
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     getUser: builder.query<UserInfo, void>({
       query: () => ({
         url: `/${AUTH_API_BASIC}/${USER_API_BASIC}`,
       }),
-      transformErrorResponse: response => getErrorReason(response),
+      transformErrorResponse: (response) => getErrorReason(response),
       providesTags: [Tags.USER],
     }),
 
     changeProfile: builder.mutation<UserInfo, Partial<UserProfile>>({
-      query: body => ({
+      query: (body) => ({
         url: `/${USER_API_BASIC}/${UserEndpoints.PROFILE}`,
         method: HTTPMethods.PUT,
         body,
       }),
-      transformErrorResponse: response => getErrorReason(response),
+      transformErrorResponse: (response) => getErrorReason(response),
       invalidatesTags: [Tags.USER],
     }),
 
     changePassword: builder.mutation<undefined, UserPassword>({
-      query: body => ({
+      query: (body) => ({
         url: `/${USER_API_BASIC}/${UserEndpoints.PASSWORD}`,
         method: HTTPMethods.PUT,
         body,
         responseHandler: "content-type",
       }),
-      transformErrorResponse: response => getErrorReason(response),
+      transformErrorResponse: (response) => getErrorReason(response),
     }),
 
     changeAvatar: builder.mutation<UserInfo, FormData>({
-      query: body => ({
+      query: (body) => ({
         url: `/${USER_API_BASIC}/${UserEndpoints.PROFILE}/${UserEndpoints.AVATAR}`,
         method: HTTPMethods.PUT,
         body,
       }),
-      transformErrorResponse: response => getErrorReason(response),
+      transformErrorResponse: (response) => getErrorReason(response),
       invalidatesTags: [Tags.USER],
     }),
   }),
