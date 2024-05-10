@@ -47,7 +47,6 @@ type Props = {
 };
 
 const CardView = ({
-  className,
   title,
   fields,
   handleSubmit,

@@ -12,7 +12,7 @@ export type ProfileProps = PropsWithChildren<{
   handleProfile: () => void;
 }>;
 
-export function ProfileWidget({ handleProfile }: ProfileProps) {
+export function ProfileWidget() {
   const [value, setValue] = useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
