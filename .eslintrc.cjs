@@ -7,6 +7,7 @@ module.exports = {
   extends: ['eslint:recommended', 'prettier'],
   parserOptions: {
     ecmaVersion: 11,
+    sourceType: 'module',
   },
   plugins: ['simple-import-sort'],
   rules: {
