@@ -1,9 +1,9 @@
-const fs = require("fs");
-const _ = require("lodash");
-const settings = require("./settings.json");
+const fs = require('fs');
+const _ = require('lodash');
+const settings = require('./settings.json');
 
 // Convert string to SCREAM_CASE
-const toScreamCase = str => {
+const toScreamCase = (str) => {
   return _.toUpper(_.snakeCase(str));
 };
 
@@ -13,29 +13,29 @@ const toScreamCase = str => {
  * @param {string} [prefix=''] - The prefix to use for the environment variable keys.
  * @returns {string} The environment variables content.
  */
-const convertToEnvFormat = (settings, prefix = "") => {
-  let result = "";
+const convertToEnvFormat = (settings, prefix = '') => {
+  let result = '';
   for (const key in settings) {
-    if (typeof settings[key] === "object") {
+    if (typeof settings[key] === 'object') {
       result += convertToEnvFormat(
         settings[key],
-        prefix + toScreamCase(key) + "_"
+        prefix + toScreamCase(key) + '_'
       );
     } else {
-      result += prefix + toScreamCase(key) + "=" + settings[key] + "\n";
+      result += prefix + toScreamCase(key) + '=' + settings[key] + '\n';
     }
   }
   return result;
 };
 
 const rootEnvKeys = [
-  "clientPort",
-  "serverPort",
-  "postgres",
-  "composeProjectName",
+  'clientPort',
+  'serverPort',
+  'postgres',
+  'composeProjectName',
 ];
-const clientEnvKeys = ["clientPort"];
-const serverEnvKeys = ["serverPort", "postgres"];
+const clientEnvKeys = ['clientPort'];
+const serverEnvKeys = ['serverPort', 'postgres'];
 
 // Create env string for a specific settings by array of keys
 const createEnvFromSettings = (settings, keys) => {
@@ -48,10 +48,10 @@ const rootEnv = createEnvFromSettings(settings, rootEnvKeys);
 const clientEnv = createEnvFromSettings(settings, clientEnvKeys);
 const serverEnv = createEnvFromSettings(settings, serverEnvKeys);
 
-fs.writeFileSync(".env", rootEnv);
-fs.writeFileSync("packages/client/.env", clientEnv);
-fs.writeFileSync("packages/server/.env", serverEnv);
+fs.writeFileSync('.env', rootEnv);
+fs.writeFileSync('packages/client/.env', clientEnv);
+fs.writeFileSync('packages/server/.env', serverEnv);
 
 // Remove old database files
-fs.rmSync("tmp/pgdata", { recursive: true, force: true });
-fs.mkdirSync("tmp/pgdata", { recursive: true });
+fs.rmSync('tmp/pgdata', { recursive: true, force: true });
+fs.mkdirSync('tmp/pgdata', { recursive: true });
