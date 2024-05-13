@@ -8,7 +8,8 @@
     "dev": "cross-env NODE_ENV=development nodemon --files index.ts",
     "lint": "eslint .",
     "format": "prettier . --write --ignore-path .gitignore",
-    "test": "jest ."
+    "test": "jest .",
+    "ts-check": "tsc"
   },
   "dependencies": {
     "@types/pino": "^7.0.5",

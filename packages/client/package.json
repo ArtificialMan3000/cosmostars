@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "format": "prettier . --write --ignore-path .gitignore",
     "test": "jest ./ --passWithNoTests",
-    "test:file": "yarn test --testMatch"
+    "test:file": "yarn test --testMatch",
+    "ts-check": "tsc"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
