@@ -1,6 +1,7 @@
-const fs = require('fs');
-const _ = require('lodash');
-const settings = require('./settings.json');
+import fs from 'fs';
+import _ from 'lodash';
+
+import settings from './settings.js';
 
 // Convert string to SCREAM_CASE
 const toScreamCase = (str) => {
