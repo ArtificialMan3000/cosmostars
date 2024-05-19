@@ -68,33 +68,41 @@
 4. Выполните команду `docker compose up`
 5. Вы великолепны!
 
-### Как запускать SSR вручную?
+### Как запускать вручную (c SSR и базой данных)?
+
+1. Установка пакетов и инициализация проекта
+   
+   `yarn bootstrap`
+
+2. Запуск базы данных через docker
+   
+   `docker compose up postgres`
+
+3. Миграция базы данных
+   
+   `yarn migrate`
+
+4. Сборка клиента
+
+   `yarn build:client`
 
 Для development:
 
-1. `cd packages/client`
-2. `yarn build`
-3. `cd ../server`
-4. `yarn dev`
-   Открыть в браузере http://localhost:8000/
+5. Запуск проекта в режиме разработки (с hot reloading)
+   
+   `yarn dev`
 
 Для production:
 
-1. `cd packages/client`
-2. `yarn build`
-3. `cd ../server`
-4. `yarn build`
-5. `yarn preview`
-   Открыть в браузере http://localhost:8000/
+5. Сборка сервера
+   
+   `yarn build:server`
 
-### Как запускать Backend вручную?
+6. Запуск проекта в режиме продакшен
+   
+   `yarn preview`
 
-После 2 пункта верхних инструкций делаем следующее:
-
-1. В корне проекта вызываем `docker compose up postgres`
-2. Переходим в папку сервера `cd packages/server`
-3. Накатываем миграции `node migrate up`
-4. Далее следуем по верхним инструкциям
+Открыть в браузере http://localhost:8000/
 
 ### Запуск тестов
 
