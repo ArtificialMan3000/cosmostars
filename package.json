@@ -13,7 +13,8 @@
     "lint:fix": "lerna run lint -- --fix",
     "format": "lerna run format",
     "preview": "lerna run preview",
-    "ts-check": "lerna run ts-check"
+    "ts-check": "lerna run ts-check",
+    "migrate": "lerna run migrate --scope=server"
   },
   "license": "MIT",
   "workspaces": [

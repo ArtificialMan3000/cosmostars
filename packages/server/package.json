@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "format": "prettier . --write --ignore-path .gitignore",
     "test": "jest .",
-    "ts-check": "tsc"
+    "ts-check": "tsc",
+    "migrate": "node migrate up"
   },
   "dependencies": {
     "@types/pino": "^7.0.5",
