@@ -1,0 +1,11 @@
+{
+  "verbose": true,
+  "ignore": ["__tests__", "**/node_modules"],
+  "execMap": {
+    "ts": "node -r ./ts-node-register.js"
+  },
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "watch": ["./src"]
+}
