@@ -23,6 +23,8 @@
     "lib": ["DOM", "es2019", "esnext.asynciterable"],
     "types": ["node", "jest"],
     "baseUrl": ".",
-    "outDir": "dist"
-  }
+    "outDir": "dist",
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*"]
 }

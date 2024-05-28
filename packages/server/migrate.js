@@ -5,4 +5,4 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-require('./db/migrator').migrator.runAsCLI();
+require('./src/db/migrator').migrator.runAsCLI();
