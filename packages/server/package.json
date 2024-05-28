@@ -6,6 +6,7 @@
     "build": "rimraf dist && tsc --p ./tsconfig.prod.json",
     "preview": "node ./dist/index.js",
     "dev": "nodemon ./src/index.ts",
+    "dev:debug": "nodemon --inspect ./src/index.ts",
     "lint": "eslint .",
     "format": "prettier . --write --ignore-path .gitignore",
     "test": "jest .",
