@@ -24,7 +24,8 @@
     "types": ["node", "jest"],
     "baseUrl": ".",
     "outDir": "dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "tsBuildInfoFile": "./dist/tsconfig.tsbuildInfo"
   },
   "include": ["src/**/*"]
 }
