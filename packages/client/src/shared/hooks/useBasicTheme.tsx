@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
 import { useEffect, useMemo, useState } from 'react';
 

@@ -1,6 +1,6 @@
 import './index.css';
 
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
 import React, { useEffect, useRef } from 'react';
 
 import { useOAuth } from '@/features/Auth/YanedxOAuth/utils';

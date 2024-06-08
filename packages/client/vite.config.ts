@@ -13,7 +13,32 @@ export default defineConfig({
     global: {},
     __SERVER_PORT__: process.env.SERVER_PORT || 8000,
   },
-  plugins: [react()],
+  plugins: [
+    react({
+      babel: {
+        plugins: [
+          [
+            'babel-plugin-import',
+            {
+              libraryName: '@mui/material',
+              libraryDirectory: '',
+              camel2DashComponentName: false,
+            },
+            'core',
+          ],
+          [
+            'babel-plugin-import',
+            {
+              libraryName: '@mui/icons-material',
+              libraryDirectory: '',
+              camel2DashComponentName: false,
+            },
+            'icons',
+          ],
+        ],
+      },
+    }),
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

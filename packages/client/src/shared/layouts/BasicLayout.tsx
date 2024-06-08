@@ -1,4 +1,5 @@
-import { Box, useTheme } from '@mui/material';
+import { Box } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { FC, PropsWithChildren, useMemo } from 'react';
 
 import BackgroundDark from '@/assets/images/bg-dark.png';
