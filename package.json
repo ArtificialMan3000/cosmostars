@@ -8,6 +8,7 @@
     "build:client": "lerna run build --scope=client",
     "build:server": "lerna run build --scope=server",
     "dev": "lerna run dev --scope=server",
+    "dev:debug": "lerna run dev:debug --scope=server",
     "test": "lerna run test",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint -- --fix",
